@@ -10,6 +10,19 @@
     <acceptfrom ruleset="CoreRPG" />
   </importinfo>
 
+  <framedef name="groupboxred">
+    <bitmap file="graphics/frames/groupboxred.png" />
+    <offset>24,12,24,12</offset>
+  </framedef>
+  <framedef name="groupboxtq">
+    <bitmap file="graphics/frames/groupboxtq.png" />
+    <offset>24,12,24,12</offset>
+  </framedef>
+  <framedef name="groupboxpurp">
+    <bitmap file="graphics/frames/groupboxpurp.png" />
+    <offset>24,12,24,12</offset>
+  </framedef>
+
   <includefile source="campaign/charsheet.xml" />
   <includefile source="campaign/charsheet_themes.xml" />
   <includefile source="strings/strings_otherscape.xml" />

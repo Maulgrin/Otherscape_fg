@@ -103,14 +103,27 @@
       end
 
       local function updateThemeFrameStyles(nTheme)
+        local function getThemeFrameName(nFrameTheme)
+          local cFamily = self[string.format("theme%d_family", nFrameTheme)];
+          local sFamily = "";
+          if cFamily and cFamily.getValue then
+            sFamily = cFamily.getValue() or "";
+          end
+
+          if sFamily == "Self" then
+            return "groupboxred";
+          elseif sFamily == "Noise" then
+            return "groupboxtq";
+          elseif sFamily == "Mythos" then
+            return "groupboxpurp";
+          end
+          return "groupbox";
+        end
+
         for i = 1, 4 do
           local cFrame = self[string.format("theme%d_frame", i)];
           if cFrame then
-            if i == nTheme then
-              cFrame.setFrame("diebox");
-            else
-              cFrame.setFrame("groupbox");
-            end
+            cFrame.setFrame(getThemeFrameName(i));
           end
         end
       end
@@ -198,18 +211,22 @@
 
       function updateTheme1IdentityLabel()
         theme1_identity_label.setValue(getIdentityLabelForFamily(theme1_family.getValue()));
+        updateThemeFrameStyles(_nSelectedTheme or 1);
       end
 
       function updateTheme2IdentityLabel()
         theme2_identity_label.setValue(getIdentityLabelForFamily(theme2_family.getValue()));
+        updateThemeFrameStyles(_nSelectedTheme or 1);
       end
 
       function updateTheme3IdentityLabel()
         theme3_identity_label.setValue(getIdentityLabelForFamily(theme3_family.getValue()));
+        updateThemeFrameStyles(_nSelectedTheme or 1);
       end
 
       function updateTheme4IdentityLabel()
         theme4_identity_label.setValue(getIdentityLabelForFamily(theme4_family.getValue()));
+        updateThemeFrameStyles(_nSelectedTheme or 1);
       end
 
       function onInit()
