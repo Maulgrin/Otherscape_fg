@@ -10,6 +10,11 @@
     <acceptfrom ruleset="CoreRPG" />
   </importinfo>
 
+  <framedef name="charsheet">
+    <bitmap file="graphics/frames/charsheet.png" />
+    <offset>67,67,67,67</offset>
+    <insideoffset>0,0,0,0</insideoffset>
+  </framedef>
   <framedef name="groupboxred">
     <bitmap file="graphics/frames/groupboxred.png" />
     <offset>24,12,24,12</offset>
@@ -22,8 +27,6 @@
     <bitmap file="graphics/frames/groupboxpurp.png" />
     <offset>24,12,24,12</offset>
   </framedef>
-
-  <includefile source="graphics/frames/charsheet.png" />
 
   <includefile source="campaign/charsheet.xml" />
   <includefile source="campaign/charsheet_themes.xml" />
