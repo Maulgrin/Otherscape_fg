@@ -3,12 +3,12 @@
   <windowclass name="charsheet">
     <frame>charsheet</frame>
     <placement>
-      <size width="950" height="950" />
+      <size width="650" height="950" />
     </placement>
     <playercontrol />
     <softclose />
     <sizelimits>
-      <minimum width="950" height="950" />
+      <minimum width="650" height="950" />
       <dynamic />
     </sizelimits>
     <tooltip field="name" />
@@ -17,10 +17,6 @@
       <subwindow name="themes">
         <bounds>10,78,-10,-32</bounds>
         <class>charsheet_themes</class>
-      </subwindow>
-      <subwindow name="loadout">
-        <bounds>10,78,-10,-32</bounds>
-        <class>charsheet_loadout</class>
       </subwindow>
 
       <picture_charsheet name="portrait">
@@ -65,11 +61,17 @@
         <readonly />
       </stringcontrol>
 
-      <close_base name="button_close">
+      <buttoncontrol name="button_close">
         <bounds>-51,0,24,24</bounds>
-        <icon normal="button_close" pressed="button_close_down" hover="button_close_hover" />
+        <icon>button_toolbar_window_close</icon>
+        <tooltip textres="button_toolbar_window_close" />
         <font>button-white</font>
-      </close_base>
+        <script>
+          function onButtonPress()
+            window.close();
+          end
+        </script>
+      </buttoncontrol>
 
       <genericcontrol name="resize">
         <bounds>-23,-24,18,18</bounds>
@@ -90,10 +92,6 @@
         <tab>
           <subwindow>themes</subwindow>
           <textres>otherscape_tab_themes</textres>
-        </tab>
-        <tab>
-          <subwindow>loadout</subwindow>
-          <textres>otherscape_tab_loadout</textres>
         </tab>
       </buttongroup_tabs>
 
