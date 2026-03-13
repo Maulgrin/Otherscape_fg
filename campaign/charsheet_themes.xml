@@ -40,6 +40,7 @@
         "identity_frame",
         "identity",
         "specialname_label",
+        "special_checked",
         "specialname_frame",
         "specialname",
         "upgrades_label",
@@ -307,10 +308,10 @@
       </stringcontrol>
       <genericcontrol name="theme1_family_frame">
         <frame name="border" />
-        <bounds>321,66,105,22</bounds>
+        <bounds>190,66,105,22</bounds>
       </genericcontrol>
       <button_stringcycler name="theme1_family" source="themes.theme1.family">
-        <bounds>321,66,105,22</bounds>
+        <bounds>190,66,105,22</bounds>
         <parameters>
           <labelsres>otherscape_family_mythos|otherscape_family_self|otherscape_family_noise</labelsres>
           <values>Mythos|Self|Noise</values>
@@ -424,16 +425,19 @@
         <bounds>85,338,341,22</bounds>
       </stringfield>
       <stringcontrol name="theme1_specialname_label">
-        <bounds>20,366,90,20</bounds>
+        <bounds>20,366,58,20</bounds>
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
+      <button_checkbox name="theme1_special_checked" source="themes.theme1.specialchecked">
+        <bounds>83,365,20,20</bounds>
+      </button_checkbox>
       <genericcontrol name="theme1_specialname_frame">
         <frame name="border" />
-        <bounds>115,364,311,22</bounds>
+        <bounds>105,364,289,22</bounds>
       </genericcontrol>
       <stringfield name="theme1_specialname" source="themes.theme1.specialname">
-        <bounds>115,364,311,22</bounds>
+        <bounds>105,364,289,22</bounds>
       </stringfield>
       <stringcontrol name="theme1_upgrades_label">
         <bounds>20,388,60,20</bounds>
@@ -483,10 +487,10 @@
       </stringcontrol>
       <genericcontrol name="theme2_family_frame">
         <frame name="border" />
-        <bounds>396,66,105,22</bounds>
+        <bounds>265,66,105,22</bounds>
       </genericcontrol>
       <button_stringcycler name="theme2_family" source="themes.theme2.family">
-        <bounds>396,66,105,22</bounds>
+        <bounds>265,66,105,22</bounds>
         <parameters>
           <labelsres>otherscape_family_mythos|otherscape_family_self|otherscape_family_noise</labelsres>
           <values>Mythos|Self|Noise</values>
@@ -600,16 +604,19 @@
         <bounds>160,338,341,22</bounds>
       </stringfield>
       <stringcontrol name="theme2_specialname_label">
-        <bounds>95,366,90,20</bounds>
+        <bounds>95,366,58,20</bounds>
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
+      <button_checkbox name="theme2_special_checked" source="themes.theme2.specialchecked">
+        <bounds>158,365,20,20</bounds>
+      </button_checkbox>
       <genericcontrol name="theme2_specialname_frame">
         <frame name="border" />
-        <bounds>190,364,311,22</bounds>
+        <bounds>180,364,289,22</bounds>
       </genericcontrol>
       <stringfield name="theme2_specialname" source="themes.theme2.specialname">
-        <bounds>190,364,311,22</bounds>
+        <bounds>180,364,289,22</bounds>
       </stringfield>
       <stringcontrol name="theme2_upgrades_label">
         <bounds>95,388,60,20</bounds>
@@ -659,10 +666,10 @@
       </stringcontrol>
       <genericcontrol name="theme3_family_frame">
         <frame name="border" />
-        <bounds>471,66,105,22</bounds>
+        <bounds>340,66,105,22</bounds>
       </genericcontrol>
       <button_stringcycler name="theme3_family" source="themes.theme3.family">
-        <bounds>471,66,105,22</bounds>
+        <bounds>340,66,105,22</bounds>
         <parameters>
           <labelsres>otherscape_family_mythos|otherscape_family_self|otherscape_family_noise</labelsres>
           <values>Mythos|Self|Noise</values>
@@ -776,16 +783,19 @@
         <bounds>235,338,341,22</bounds>
       </stringfield>
       <stringcontrol name="theme3_specialname_label">
-        <bounds>170,366,90,20</bounds>
+        <bounds>170,366,58,20</bounds>
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
+      <button_checkbox name="theme3_special_checked" source="themes.theme3.specialchecked">
+        <bounds>233,365,20,20</bounds>
+      </button_checkbox>
       <genericcontrol name="theme3_specialname_frame">
         <frame name="border" />
-        <bounds>265,364,311,22</bounds>
+        <bounds>255,364,289,22</bounds>
       </genericcontrol>
       <stringfield name="theme3_specialname" source="themes.theme3.specialname">
-        <bounds>265,364,311,22</bounds>
+        <bounds>255,364,289,22</bounds>
       </stringfield>
       <stringcontrol name="theme3_upgrades_label">
         <bounds>170,388,60,20</bounds>
@@ -835,10 +845,10 @@
       </stringcontrol>
       <genericcontrol name="theme4_family_frame">
         <frame name="border" />
-        <bounds>546,66,105,22</bounds>
+        <bounds>415,66,105,22</bounds>
       </genericcontrol>
       <button_stringcycler name="theme4_family" source="themes.theme4.family">
-        <bounds>546,66,105,22</bounds>
+        <bounds>415,66,105,22</bounds>
         <parameters>
           <labelsres>otherscape_family_mythos|otherscape_family_self|otherscape_family_noise</labelsres>
           <values>Mythos|Self|Noise</values>
@@ -952,16 +962,19 @@
         <bounds>310,338,341,22</bounds>
       </stringfield>
       <stringcontrol name="theme4_specialname_label">
-        <bounds>245,366,90,20</bounds>
+        <bounds>245,366,58,20</bounds>
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
+      <button_checkbox name="theme4_special_checked" source="themes.theme4.specialchecked">
+        <bounds>308,365,20,20</bounds>
+      </button_checkbox>
       <genericcontrol name="theme4_specialname_frame">
         <frame name="border" />
-        <bounds>340,364,311,22</bounds>
+        <bounds>330,364,289,22</bounds>
       </genericcontrol>
       <stringfield name="theme4_specialname" source="themes.theme4.specialname">
-        <bounds>340,364,311,22</bounds>
+        <bounds>330,364,289,22</bounds>
       </stringfield>
       <stringcontrol name="theme4_upgrades_label">
         <bounds>245,388,60,20</bounds>
@@ -980,12 +993,105 @@
       <formattedtextfield name="theme4_specialtext" source="themes.theme4.specialtext">
         <bounds>245,410,406,16</bounds>
       </formattedtextfield>
-      <subwindow name="loadout_inline">
-        <bounds>10,490,520,320</bounds>
-        <class>charsheet_loadout</class>
-        <activate />
-        <fastinit />
-      </subwindow>
+      <genericcontrol name="loadout_frame">
+        <frame name="groupbox" />
+        <bounds>20,500,300,320</bounds>
+      </genericcontrol>
+      <stringcontrol name="loadout_title">
+        <bounds>30,506,100,20</bounds>
+        <static textres="otherscape_label_loadout" />
+        <readonly />
+      </stringcontrol>
+      <stringcontrol name="loadout_hdr_on">
+        <bounds>34,534,30,20</bounds>
+        <static textres="otherscape_label_on" />
+        <readonly />
+      </stringcontrol>
+      <stringcontrol name="loadout_hdr_item">
+        <bounds>68,534,80,20</bounds>
+        <static textres="otherscape_label_item" />
+        <readonly />
+      </stringcontrol>
+      <genericcontrol name="loadout_item1_rowframe">
+        <frame name="border" />
+        <bounds>68,554,188,22</bounds>
+      </genericcontrol>
+      <button_checkbox name="loadout_item1_checked" source="loadout.item1.checked">
+        <bounds>34,556,20,20</bounds>
+      </button_checkbox>
+      <stringfield name="loadout_item1_name" source="loadout.item1.name">
+        <bounds>74,554,172,22</bounds>
+      </stringfield>
+      <genericcontrol name="loadout_item2_rowframe">
+        <frame name="border" />
+        <bounds>68,582,188,22</bounds>
+      </genericcontrol>
+      <button_checkbox name="loadout_item2_checked" source="loadout.item2.checked">
+        <bounds>34,584,20,20</bounds>
+      </button_checkbox>
+      <stringfield name="loadout_item2_name" source="loadout.item2.name">
+        <bounds>74,582,172,22</bounds>
+      </stringfield>
+      <genericcontrol name="loadout_item3_rowframe">
+        <frame name="border" />
+        <bounds>68,610,188,22</bounds>
+      </genericcontrol>
+      <button_checkbox name="loadout_item3_checked" source="loadout.item3.checked">
+        <bounds>34,612,20,20</bounds>
+      </button_checkbox>
+      <stringfield name="loadout_item3_name" source="loadout.item3.name">
+        <bounds>74,610,172,22</bounds>
+      </stringfield>
+      <genericcontrol name="loadout_item4_rowframe">
+        <frame name="border" />
+        <bounds>68,638,188,22</bounds>
+      </genericcontrol>
+      <button_checkbox name="loadout_item4_checked" source="loadout.item4.checked">
+        <bounds>34,640,20,20</bounds>
+      </button_checkbox>
+      <stringfield name="loadout_item4_name" source="loadout.item4.name">
+        <bounds>74,638,172,22</bounds>
+      </stringfield>
+      <genericcontrol name="loadout_item5_rowframe">
+        <frame name="border" />
+        <bounds>68,666,188,22</bounds>
+      </genericcontrol>
+      <button_checkbox name="loadout_item5_checked" source="loadout.item5.checked">
+        <bounds>34,668,20,20</bounds>
+      </button_checkbox>
+      <stringfield name="loadout_item5_name" source="loadout.item5.name">
+        <bounds>74,666,172,22</bounds>
+      </stringfield>
+      <genericcontrol name="loadout_item6_rowframe">
+        <frame name="border" />
+        <bounds>68,694,188,22</bounds>
+      </genericcontrol>
+      <button_checkbox name="loadout_item6_checked" source="loadout.item6.checked">
+        <bounds>34,696,20,20</bounds>
+      </button_checkbox>
+      <stringfield name="loadout_item6_name" source="loadout.item6.name">
+        <bounds>74,694,172,22</bounds>
+      </stringfield>
+      <genericcontrol name="loadout_item7_rowframe">
+        <frame name="border" />
+        <bounds>68,722,188,22</bounds>
+      </genericcontrol>
+      <button_checkbox name="loadout_item7_checked" source="loadout.item7.checked">
+        <bounds>34,724,20,20</bounds>
+      </button_checkbox>
+      <stringfield name="loadout_item7_name" source="loadout.item7.name">
+        <bounds>74,722,172,22</bounds>
+      </stringfield>
+      <genericcontrol name="loadout_item8_rowframe">
+        <frame name="border" />
+        <bounds>68,750,188,22</bounds>
+      </genericcontrol>
+      <button_checkbox name="loadout_item8_checked" source="loadout.item8.checked">
+        <bounds>34,752,20,20</bounds>
+      </button_checkbox>
+      <stringfield name="loadout_item8_name" source="loadout.item8.name">
+        <bounds>74,750,172,22</bounds>
+      </stringfield>
     </sheetdata>
   </windowclass>
 </root>

@@ -12,6 +12,5 @@
 
   <includefile source="campaign/charsheet.xml" />
   <includefile source="campaign/charsheet_themes.xml" />
-  <includefile source="campaign/charsheet_loadout.xml" />
   <includefile source="strings/strings_otherscape.xml" />
 </root>
