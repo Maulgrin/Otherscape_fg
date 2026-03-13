@@ -89,14 +89,40 @@
         end
       end
 
-      local function shiftThemeControlsY(nTheme, nDelta)
+      local function shiftThemeControlsX(nTheme, nDelta)
         local sPrefix = string.format("theme%d_", nTheme);
         for _, sSuffix in ipairs(_aThemeControlSuffixes) do
           local c = self[sPrefix .. sSuffix];
           if c and c.getStaticBounds and c.setStaticBounds then
             local x, y, w, h = c.getStaticBounds();
             if x and y and w and h then
-              c.setStaticBounds(x, y + nDelta, w, h);
+              c.setStaticBounds(x + nDelta, y, w, h);
+            end
+          end
+        end
+      end
+
+      local function shiftLoadoutControlsX(nDelta)
+        local aControlNames = {
+          "loadout_frame",
+          "loadout_title",
+          "loadout_hdr_on",
+          "loadout_hdr_item"
+        };
+
+        for i = 1, 8 do
+          table.insert(aControlNames, string.format("loadout_item%d_rowframe", i));
+          table.insert(aControlNames, string.format("loadout_item%d_checked", i));
+          table.insert(aControlNames, string.format("loadout_item%d_name", i));
+          table.insert(aControlNames, string.format("loadout_item%d_checked_after", i));
+        end
+
+        for _, sName in ipairs(aControlNames) do
+          local c = self[sName];
+          if c and c.getStaticBounds and c.setStaticBounds then
+            local x, y, w, h = c.getStaticBounds();
+            if x and y and w and h then
+              c.setStaticBounds(x + nDelta, y, w, h);
             end
           end
         end
@@ -170,13 +196,7 @@
         local n = tonumber(nTheme) or 1;
         n = math.max(1, math.min(4, n));
 
-        if _nSelectedTheme and _nSelectedTheme ~= n then
-          shiftThemeControlsY(_nSelectedTheme, -20);
-        end
-        if _nSelectedTheme ~= n then
-          shiftThemeControlsY(n, 20);
-          _nSelectedTheme = n;
-        end
+        _nSelectedTheme = n;
 
         updateThemeFrameStyles(n);
         for i = 1, 4 do
@@ -230,6 +250,12 @@
       end
 
       function onInit()
+        local nCascadeExtra = 50;
+        shiftThemeControlsX(2, nCascadeExtra);
+        shiftThemeControlsX(3, nCascadeExtra * 2);
+        shiftThemeControlsX(4, nCascadeExtra * 3);
+        shiftLoadoutControlsX(nCascadeExtra * 3);
+
         ActionsManager.initAction("tagroll");
         if GameSystem and GameSystem.actions and GameSystem.actions.tagroll then
           GameSystem.actions.tagroll.bUseModStack = "false";
