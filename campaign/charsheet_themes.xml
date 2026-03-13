@@ -458,10 +458,10 @@
       </button_checkbox>
       <genericcontrol name="theme1_specialname_frame">
         <frame name="border" />
-        <bounds>105,364,280,22</bounds>
+        <bounds>105,364,278,22</bounds>
       </genericcontrol>
       <stringfield name="theme1_specialname" source="themes.theme1.specialname">
-        <bounds>105,364,280,22</bounds>
+        <bounds>105,364,278,22</bounds>
       </stringfield>
       <stringcontrol name="theme1_upgrades_label">
         <bounds>20,388,60,20</bounds>
@@ -655,10 +655,10 @@
       </button_checkbox>
       <genericcontrol name="theme2_specialname_frame">
         <frame name="border" />
-        <bounds>180,364,280,22</bounds>
+        <bounds>180,364,278,22</bounds>
       </genericcontrol>
       <stringfield name="theme2_specialname" source="themes.theme2.specialname">
-        <bounds>180,364,280,22</bounds>
+        <bounds>180,364,278,22</bounds>
       </stringfield>
       <stringcontrol name="theme2_upgrades_label">
         <bounds>95,388,60,20</bounds>
@@ -852,10 +852,10 @@
       </button_checkbox>
       <genericcontrol name="theme3_specialname_frame">
         <frame name="border" />
-        <bounds>255,364,280,22</bounds>
+        <bounds>255,364,278,22</bounds>
       </genericcontrol>
       <stringfield name="theme3_specialname" source="themes.theme3.specialname">
-        <bounds>255,364,280,22</bounds>
+        <bounds>255,364,278,22</bounds>
       </stringfield>
       <stringcontrol name="theme3_upgrades_label">
         <bounds>170,388,60,20</bounds>
@@ -1049,10 +1049,10 @@
       </button_checkbox>
       <genericcontrol name="theme4_specialname_frame">
         <frame name="border" />
-        <bounds>330,364,280,22</bounds>
+        <bounds>330,364,278,22</bounds>
       </genericcontrol>
       <stringfield name="theme4_specialname" source="themes.theme4.specialname">
-        <bounds>330,364,280,22</bounds>
+        <bounds>330,364,278,22</bounds>
       </stringfield>
       <stringcontrol name="theme4_upgrades_label">
         <bounds>245,388,60,20</bounds>
