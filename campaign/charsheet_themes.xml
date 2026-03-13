@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
+  <template name="os_checkbox">
+    <buttonfield>
+      <font>sheetlabelinline</font>
+      <state>
+        <frame name="border" />
+      </state>
+      <state>
+        <frame name="border" />
+        <text>X</text>
+      </state>
+    </buttonfield>
+  </template>
   <windowclass name="charsheet_themes">
     <sheetdata>
       <genericcontrol name="theme1_frame">
@@ -48,9 +60,9 @@
         <frame name="border" />
         <bounds>44,88,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme1_tag1_checked" source="themes.theme1.tags.tag1.checked">
+      <os_checkbox name="theme1_tag1_checked" source="themes.theme1.tags.tag1.checked">
         <bounds>20,89,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme1_tag1_name" source="themes.theme1.tags.tag1.name">
         <bounds>50,88,476,22</bounds>
       </stringfield>
@@ -58,9 +70,9 @@
         <frame name="border" />
         <bounds>44,112,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme1_tag2_checked" source="themes.theme1.tags.tag2.checked">
+      <os_checkbox name="theme1_tag2_checked" source="themes.theme1.tags.tag2.checked">
         <bounds>20,113,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme1_tag2_name" source="themes.theme1.tags.tag2.name">
         <bounds>50,112,476,22</bounds>
       </stringfield>
@@ -68,9 +80,9 @@
         <frame name="border" />
         <bounds>44,136,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme1_tag3_checked" source="themes.theme1.tags.tag3.checked">
+      <os_checkbox name="theme1_tag3_checked" source="themes.theme1.tags.tag3.checked">
         <bounds>20,137,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme1_tag3_name" source="themes.theme1.tags.tag3.name">
         <bounds>50,136,476,22</bounds>
       </stringfield>
@@ -78,9 +90,9 @@
         <frame name="border" />
         <bounds>44,160,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme1_tag4_checked" source="themes.theme1.tags.tag4.checked">
+      <os_checkbox name="theme1_tag4_checked" source="themes.theme1.tags.tag4.checked">
         <bounds>20,161,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme1_tag4_name" source="themes.theme1.tags.tag4.name">
         <bounds>50,160,476,22</bounds>
       </stringfield>
@@ -88,9 +100,9 @@
         <frame name="border" />
         <bounds>44,184,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme1_tag5_checked" source="themes.theme1.tags.tag5.checked">
+      <os_checkbox name="theme1_tag5_checked" source="themes.theme1.tags.tag5.checked">
         <bounds>20,185,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme1_tag5_name" source="themes.theme1.tags.tag5.name">
         <bounds>50,184,476,22</bounds>
       </stringfield>
@@ -98,9 +110,9 @@
         <frame name="border" />
         <bounds>44,208,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme1_tag6_checked" source="themes.theme1.tags.tag6.checked">
+      <os_checkbox name="theme1_tag6_checked" source="themes.theme1.tags.tag6.checked">
         <bounds>20,209,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme1_tag6_name" source="themes.theme1.tags.tag6.name">
         <bounds>50,208,476,22</bounds>
       </stringfield>
@@ -113,9 +125,9 @@
         <frame name="border" />
         <bounds>44,258,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme1_tag7_checked" source="themes.theme1.tags.tag7.checked">
+      <os_checkbox name="theme1_tag7_checked" source="themes.theme1.tags.tag7.checked">
         <bounds>20,259,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme1_tag7_name" source="themes.theme1.tags.tag7.name">
         <bounds>50,258,476,22</bounds>
       </stringfield>
@@ -123,9 +135,9 @@
         <frame name="border" />
         <bounds>44,282,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme1_tag8_checked" source="themes.theme1.tags.tag8.checked">
+      <os_checkbox name="theme1_tag8_checked" source="themes.theme1.tags.tag8.checked">
         <bounds>20,283,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme1_tag8_name" source="themes.theme1.tags.tag8.name">
         <bounds>50,282,476,22</bounds>
       </stringfield>
@@ -158,27 +170,15 @@
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
-      <genericcontrol name="theme1_upgrade1_frame">
-        <frame name="border" />
+      <os_checkbox name="theme1_upgrade1" source="themes.theme1.upgrade1">
         <bounds>380,336,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme1_upgrade1" source="themes.theme1.upgrade1">
-        <bounds>380,336,20,20</bounds>
-      </checkbox>
-      <genericcontrol name="theme1_upgrade2_frame">
-        <frame name="border" />
+      </os_checkbox>
+      <os_checkbox name="theme1_upgrade2" source="themes.theme1.upgrade2">
         <bounds>406,336,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme1_upgrade2" source="themes.theme1.upgrade2">
-        <bounds>406,336,20,20</bounds>
-      </checkbox>
-      <genericcontrol name="theme1_upgrade3_frame">
-        <frame name="border" />
+      </os_checkbox>
+      <os_checkbox name="theme1_upgrade3" source="themes.theme1.upgrade3">
         <bounds>432,336,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme1_upgrade3" source="themes.theme1.upgrade3">
-        <bounds>432,336,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <formattedtext name="theme1_specialtext" source="themes.theme1.specialtext">
         <bounds>20,364,510,34</bounds>
       </formattedtext>
@@ -228,9 +228,9 @@
         <frame name="border" />
         <bounds>599,88,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme2_tag1_checked" source="themes.theme2.tags.tag1.checked">
+      <os_checkbox name="theme2_tag1_checked" source="themes.theme2.tags.tag1.checked">
         <bounds>575,89,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme2_tag1_name" source="themes.theme2.tags.tag1.name">
         <bounds>605,88,476,22</bounds>
       </stringfield>
@@ -238,9 +238,9 @@
         <frame name="border" />
         <bounds>599,112,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme2_tag2_checked" source="themes.theme2.tags.tag2.checked">
+      <os_checkbox name="theme2_tag2_checked" source="themes.theme2.tags.tag2.checked">
         <bounds>575,113,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme2_tag2_name" source="themes.theme2.tags.tag2.name">
         <bounds>605,112,476,22</bounds>
       </stringfield>
@@ -248,9 +248,9 @@
         <frame name="border" />
         <bounds>599,136,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme2_tag3_checked" source="themes.theme2.tags.tag3.checked">
+      <os_checkbox name="theme2_tag3_checked" source="themes.theme2.tags.tag3.checked">
         <bounds>575,137,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme2_tag3_name" source="themes.theme2.tags.tag3.name">
         <bounds>605,136,476,22</bounds>
       </stringfield>
@@ -258,9 +258,9 @@
         <frame name="border" />
         <bounds>599,160,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme2_tag4_checked" source="themes.theme2.tags.tag4.checked">
+      <os_checkbox name="theme2_tag4_checked" source="themes.theme2.tags.tag4.checked">
         <bounds>575,161,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme2_tag4_name" source="themes.theme2.tags.tag4.name">
         <bounds>605,160,476,22</bounds>
       </stringfield>
@@ -268,9 +268,9 @@
         <frame name="border" />
         <bounds>599,184,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme2_tag5_checked" source="themes.theme2.tags.tag5.checked">
+      <os_checkbox name="theme2_tag5_checked" source="themes.theme2.tags.tag5.checked">
         <bounds>575,185,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme2_tag5_name" source="themes.theme2.tags.tag5.name">
         <bounds>605,184,476,22</bounds>
       </stringfield>
@@ -278,9 +278,9 @@
         <frame name="border" />
         <bounds>599,208,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme2_tag6_checked" source="themes.theme2.tags.tag6.checked">
+      <os_checkbox name="theme2_tag6_checked" source="themes.theme2.tags.tag6.checked">
         <bounds>575,209,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme2_tag6_name" source="themes.theme2.tags.tag6.name">
         <bounds>605,208,476,22</bounds>
       </stringfield>
@@ -293,9 +293,9 @@
         <frame name="border" />
         <bounds>599,258,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme2_tag7_checked" source="themes.theme2.tags.tag7.checked">
+      <os_checkbox name="theme2_tag7_checked" source="themes.theme2.tags.tag7.checked">
         <bounds>575,259,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme2_tag7_name" source="themes.theme2.tags.tag7.name">
         <bounds>605,258,476,22</bounds>
       </stringfield>
@@ -303,9 +303,9 @@
         <frame name="border" />
         <bounds>599,282,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme2_tag8_checked" source="themes.theme2.tags.tag8.checked">
+      <os_checkbox name="theme2_tag8_checked" source="themes.theme2.tags.tag8.checked">
         <bounds>575,283,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme2_tag8_name" source="themes.theme2.tags.tag8.name">
         <bounds>605,282,476,22</bounds>
       </stringfield>
@@ -338,27 +338,15 @@
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
-      <genericcontrol name="theme2_upgrade1_frame">
-        <frame name="border" />
+      <os_checkbox name="theme2_upgrade1" source="themes.theme2.upgrade1">
         <bounds>935,336,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme2_upgrade1" source="themes.theme2.upgrade1">
-        <bounds>935,336,20,20</bounds>
-      </checkbox>
-      <genericcontrol name="theme2_upgrade2_frame">
-        <frame name="border" />
+      </os_checkbox>
+      <os_checkbox name="theme2_upgrade2" source="themes.theme2.upgrade2">
         <bounds>961,336,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme2_upgrade2" source="themes.theme2.upgrade2">
-        <bounds>961,336,20,20</bounds>
-      </checkbox>
-      <genericcontrol name="theme2_upgrade3_frame">
-        <frame name="border" />
+      </os_checkbox>
+      <os_checkbox name="theme2_upgrade3" source="themes.theme2.upgrade3">
         <bounds>987,336,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme2_upgrade3" source="themes.theme2.upgrade3">
-        <bounds>987,336,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <formattedtext name="theme2_specialtext" source="themes.theme2.specialtext">
         <bounds>575,364,510,34</bounds>
       </formattedtext>
@@ -408,9 +396,9 @@
         <frame name="border" />
         <bounds>44,493,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme3_tag1_checked" source="themes.theme3.tags.tag1.checked">
+      <os_checkbox name="theme3_tag1_checked" source="themes.theme3.tags.tag1.checked">
         <bounds>20,494,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme3_tag1_name" source="themes.theme3.tags.tag1.name">
         <bounds>50,493,476,22</bounds>
       </stringfield>
@@ -418,9 +406,9 @@
         <frame name="border" />
         <bounds>44,517,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme3_tag2_checked" source="themes.theme3.tags.tag2.checked">
+      <os_checkbox name="theme3_tag2_checked" source="themes.theme3.tags.tag2.checked">
         <bounds>20,518,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme3_tag2_name" source="themes.theme3.tags.tag2.name">
         <bounds>50,517,476,22</bounds>
       </stringfield>
@@ -428,9 +416,9 @@
         <frame name="border" />
         <bounds>44,541,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme3_tag3_checked" source="themes.theme3.tags.tag3.checked">
+      <os_checkbox name="theme3_tag3_checked" source="themes.theme3.tags.tag3.checked">
         <bounds>20,542,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme3_tag3_name" source="themes.theme3.tags.tag3.name">
         <bounds>50,541,476,22</bounds>
       </stringfield>
@@ -438,9 +426,9 @@
         <frame name="border" />
         <bounds>44,565,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme3_tag4_checked" source="themes.theme3.tags.tag4.checked">
+      <os_checkbox name="theme3_tag4_checked" source="themes.theme3.tags.tag4.checked">
         <bounds>20,566,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme3_tag4_name" source="themes.theme3.tags.tag4.name">
         <bounds>50,565,476,22</bounds>
       </stringfield>
@@ -448,9 +436,9 @@
         <frame name="border" />
         <bounds>44,589,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme3_tag5_checked" source="themes.theme3.tags.tag5.checked">
+      <os_checkbox name="theme3_tag5_checked" source="themes.theme3.tags.tag5.checked">
         <bounds>20,590,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme3_tag5_name" source="themes.theme3.tags.tag5.name">
         <bounds>50,589,476,22</bounds>
       </stringfield>
@@ -458,9 +446,9 @@
         <frame name="border" />
         <bounds>44,613,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme3_tag6_checked" source="themes.theme3.tags.tag6.checked">
+      <os_checkbox name="theme3_tag6_checked" source="themes.theme3.tags.tag6.checked">
         <bounds>20,614,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme3_tag6_name" source="themes.theme3.tags.tag6.name">
         <bounds>50,613,476,22</bounds>
       </stringfield>
@@ -473,9 +461,9 @@
         <frame name="border" />
         <bounds>44,663,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme3_tag7_checked" source="themes.theme3.tags.tag7.checked">
+      <os_checkbox name="theme3_tag7_checked" source="themes.theme3.tags.tag7.checked">
         <bounds>20,664,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme3_tag7_name" source="themes.theme3.tags.tag7.name">
         <bounds>50,663,476,22</bounds>
       </stringfield>
@@ -483,9 +471,9 @@
         <frame name="border" />
         <bounds>44,687,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme3_tag8_checked" source="themes.theme3.tags.tag8.checked">
+      <os_checkbox name="theme3_tag8_checked" source="themes.theme3.tags.tag8.checked">
         <bounds>20,688,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme3_tag8_name" source="themes.theme3.tags.tag8.name">
         <bounds>50,687,476,22</bounds>
       </stringfield>
@@ -518,27 +506,15 @@
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
-      <genericcontrol name="theme3_upgrade1_frame">
-        <frame name="border" />
+      <os_checkbox name="theme3_upgrade1" source="themes.theme3.upgrade1">
         <bounds>380,741,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme3_upgrade1" source="themes.theme3.upgrade1">
-        <bounds>380,741,20,20</bounds>
-      </checkbox>
-      <genericcontrol name="theme3_upgrade2_frame">
-        <frame name="border" />
+      </os_checkbox>
+      <os_checkbox name="theme3_upgrade2" source="themes.theme3.upgrade2">
         <bounds>406,741,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme3_upgrade2" source="themes.theme3.upgrade2">
-        <bounds>406,741,20,20</bounds>
-      </checkbox>
-      <genericcontrol name="theme3_upgrade3_frame">
-        <frame name="border" />
+      </os_checkbox>
+      <os_checkbox name="theme3_upgrade3" source="themes.theme3.upgrade3">
         <bounds>432,741,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme3_upgrade3" source="themes.theme3.upgrade3">
-        <bounds>432,741,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <formattedtext name="theme3_specialtext" source="themes.theme3.specialtext">
         <bounds>20,769,510,34</bounds>
       </formattedtext>
@@ -588,9 +564,9 @@
         <frame name="border" />
         <bounds>599,493,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme4_tag1_checked" source="themes.theme4.tags.tag1.checked">
+      <os_checkbox name="theme4_tag1_checked" source="themes.theme4.tags.tag1.checked">
         <bounds>575,494,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme4_tag1_name" source="themes.theme4.tags.tag1.name">
         <bounds>605,493,476,22</bounds>
       </stringfield>
@@ -598,9 +574,9 @@
         <frame name="border" />
         <bounds>599,517,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme4_tag2_checked" source="themes.theme4.tags.tag2.checked">
+      <os_checkbox name="theme4_tag2_checked" source="themes.theme4.tags.tag2.checked">
         <bounds>575,518,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme4_tag2_name" source="themes.theme4.tags.tag2.name">
         <bounds>605,517,476,22</bounds>
       </stringfield>
@@ -608,9 +584,9 @@
         <frame name="border" />
         <bounds>599,541,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme4_tag3_checked" source="themes.theme4.tags.tag3.checked">
+      <os_checkbox name="theme4_tag3_checked" source="themes.theme4.tags.tag3.checked">
         <bounds>575,542,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme4_tag3_name" source="themes.theme4.tags.tag3.name">
         <bounds>605,541,476,22</bounds>
       </stringfield>
@@ -618,9 +594,9 @@
         <frame name="border" />
         <bounds>599,565,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme4_tag4_checked" source="themes.theme4.tags.tag4.checked">
+      <os_checkbox name="theme4_tag4_checked" source="themes.theme4.tags.tag4.checked">
         <bounds>575,566,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme4_tag4_name" source="themes.theme4.tags.tag4.name">
         <bounds>605,565,476,22</bounds>
       </stringfield>
@@ -628,9 +604,9 @@
         <frame name="border" />
         <bounds>599,589,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme4_tag5_checked" source="themes.theme4.tags.tag5.checked">
+      <os_checkbox name="theme4_tag5_checked" source="themes.theme4.tags.tag5.checked">
         <bounds>575,590,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme4_tag5_name" source="themes.theme4.tags.tag5.name">
         <bounds>605,589,476,22</bounds>
       </stringfield>
@@ -638,9 +614,9 @@
         <frame name="border" />
         <bounds>599,613,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme4_tag6_checked" source="themes.theme4.tags.tag6.checked">
+      <os_checkbox name="theme4_tag6_checked" source="themes.theme4.tags.tag6.checked">
         <bounds>575,614,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme4_tag6_name" source="themes.theme4.tags.tag6.name">
         <bounds>605,613,476,22</bounds>
       </stringfield>
@@ -653,9 +629,9 @@
         <frame name="border" />
         <bounds>599,663,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme4_tag7_checked" source="themes.theme4.tags.tag7.checked">
+      <os_checkbox name="theme4_tag7_checked" source="themes.theme4.tags.tag7.checked">
         <bounds>575,664,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme4_tag7_name" source="themes.theme4.tags.tag7.name">
         <bounds>605,663,476,22</bounds>
       </stringfield>
@@ -663,9 +639,9 @@
         <frame name="border" />
         <bounds>599,687,486,22</bounds>
       </genericcontrol>
-      <checkbox name="theme4_tag8_checked" source="themes.theme4.tags.tag8.checked">
+      <os_checkbox name="theme4_tag8_checked" source="themes.theme4.tags.tag8.checked">
         <bounds>575,688,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <stringfield name="theme4_tag8_name" source="themes.theme4.tags.tag8.name">
         <bounds>605,687,476,22</bounds>
       </stringfield>
@@ -698,27 +674,15 @@
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
-      <genericcontrol name="theme4_upgrade1_frame">
-        <frame name="border" />
+      <os_checkbox name="theme4_upgrade1" source="themes.theme4.upgrade1">
         <bounds>935,741,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme4_upgrade1" source="themes.theme4.upgrade1">
-        <bounds>935,741,20,20</bounds>
-      </checkbox>
-      <genericcontrol name="theme4_upgrade2_frame">
-        <frame name="border" />
+      </os_checkbox>
+      <os_checkbox name="theme4_upgrade2" source="themes.theme4.upgrade2">
         <bounds>961,741,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme4_upgrade2" source="themes.theme4.upgrade2">
-        <bounds>961,741,20,20</bounds>
-      </checkbox>
-      <genericcontrol name="theme4_upgrade3_frame">
-        <frame name="border" />
+      </os_checkbox>
+      <os_checkbox name="theme4_upgrade3" source="themes.theme4.upgrade3">
         <bounds>987,741,20,20</bounds>
-      </genericcontrol>
-      <checkbox name="theme4_upgrade3" source="themes.theme4.upgrade3">
-        <bounds>987,741,20,20</bounds>
-      </checkbox>
+      </os_checkbox>
       <formattedtext name="theme4_specialtext" source="themes.theme4.specialtext">
         <bounds>575,769,510,34</bounds>
       </formattedtext>
