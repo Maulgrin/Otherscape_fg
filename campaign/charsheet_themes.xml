@@ -123,6 +123,29 @@
         end
       end
 
+      local function getTagRollOutcome(nTotal)
+        if nTotal > 9 then
+          return "STRONG HIT";
+        elseif nTotal > 6 then
+          return "MIXED HIT";
+        end
+        return "MISS";
+      end
+
+      local function onTagRollResult(rSource, _, rRoll)
+        local nTotal = ActionsManager.total(rRoll);
+        local sOutcome = getTagRollOutcome(nTotal);
+
+        local rMessage = ActionsManager.createActionMessage(rSource, rRoll);
+        local sBaseText = rMessage.text or "[TAG ROLL]";
+        rMessage.text = string.format("%s [%s]", sBaseText, sOutcome);
+        Comm.deliverChatMessage(rMessage);
+
+        if theme_roll_tagnumber then
+          theme_roll_tagnumber.setValue(0);
+        end
+      end
+
       function selectThemeTab(nTheme)
         local n = tonumber(nTheme) or 1;
         n = math.max(1, math.min(4, n));
@@ -187,6 +210,9 @@
         if GameSystem and GameSystem.actions and GameSystem.actions.tagroll then
           GameSystem.actions.tagroll.bUseModStack = "false";
         end
+        if not ActionsManager.getResultHandler("tagroll") then
+          ActionsManager.registerResultHandler("tagroll", onTagRollResult);
+        end
 
         updateTheme1IdentityLabel();
         updateTheme2IdentityLabel();
@@ -237,7 +263,7 @@
         </script>
       </button_text_toggle_sm>
       <buttoncontrol name="theme_roll_button">
-        <bounds>405,14,20,20</bounds>
+        <bounds>405,14,25,25</bounds>
         <icon normal="button_roll" pressed="button_roll_down" />
         <tooltip text="Roll 2d6 + Tag" />
         <script>
@@ -247,7 +273,7 @@
         </script>
       </buttoncontrol>
       <numberfield name="theme_roll_tagnumber" source="roll.tagnumber">
-        <bounds>430,14,45,20</bounds>
+        <bounds>435,14,56,25</bounds>
         <frame name="border" />
       </numberfield>
       <genericcontrol name="theme1_frame">

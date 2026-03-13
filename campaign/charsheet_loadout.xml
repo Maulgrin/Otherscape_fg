@@ -29,7 +29,7 @@
         <bounds>24,66,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item1_name" source="loadout.item1.name">
-        <bounds>64,64,430,22</bounds>
+        <bounds>64,64,344,22</bounds>
       </stringfield>
       <genericcontrol name="loadout_item2_rowframe">
         <frame name="border" />
@@ -39,7 +39,7 @@
         <bounds>24,94,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item2_name" source="loadout.item2.name">
-        <bounds>64,92,430,22</bounds>
+        <bounds>64,92,344,22</bounds>
       </stringfield>
       <genericcontrol name="loadout_item3_rowframe">
         <frame name="border" />
@@ -49,7 +49,7 @@
         <bounds>24,122,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item3_name" source="loadout.item3.name">
-        <bounds>64,120,430,22</bounds>
+        <bounds>64,120,344,22</bounds>
       </stringfield>
       <genericcontrol name="loadout_item4_rowframe">
         <frame name="border" />
@@ -59,7 +59,7 @@
         <bounds>24,150,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item4_name" source="loadout.item4.name">
-        <bounds>64,148,430,22</bounds>
+        <bounds>64,148,344,22</bounds>
       </stringfield>
       <genericcontrol name="loadout_item5_rowframe">
         <frame name="border" />
@@ -69,7 +69,7 @@
         <bounds>24,178,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item5_name" source="loadout.item5.name">
-        <bounds>64,176,430,22</bounds>
+        <bounds>64,176,344,22</bounds>
       </stringfield>
       <genericcontrol name="loadout_item6_rowframe">
         <frame name="border" />
@@ -79,7 +79,7 @@
         <bounds>24,206,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item6_name" source="loadout.item6.name">
-        <bounds>64,204,430,22</bounds>
+        <bounds>64,204,344,22</bounds>
       </stringfield>
       <genericcontrol name="loadout_item7_rowframe">
         <frame name="border" />
@@ -89,7 +89,7 @@
         <bounds>24,234,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item7_name" source="loadout.item7.name">
-        <bounds>64,232,430,22</bounds>
+        <bounds>64,232,344,22</bounds>
       </stringfield>
       <genericcontrol name="loadout_item8_rowframe">
         <frame name="border" />
@@ -99,7 +99,7 @@
         <bounds>24,262,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item8_name" source="loadout.item8.name">
-        <bounds>64,260,430,22</bounds>
+        <bounds>64,260,344,22</bounds>
       </stringfield>
     </sheetdata>
   </windowclass>
