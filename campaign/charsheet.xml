@@ -35,7 +35,7 @@
       </genericcontrol>
 
       <stringfield name="name">
-        <frame name="border" offset="5,0,0,0" />
+        <frame name="fielddark" offset="5,0,0,0" />
         <anchored>
           <left anchor="left" parent="overviewframe" offset="31" />
           <right offset="-251" />
