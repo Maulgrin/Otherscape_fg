@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root version="3.0" release="0">
+  <description>
+    <text>Otherscape Fantasy Grounds sheet v0.1 - Themes and Loadout</text>
+    <author>OpenAI for Todd Beaumont</author>
+  </description>
+  <importruleset source="CoreRPG" />
+  <importinfo>
+    <acceptfrom ruleset="CoreRPG" />
+  </importinfo>
+
+  <includefile source="campaign/charsheet.xml" />
+  <includefile source="campaign/charsheet_themes.xml" />
+  <includefile source="campaign/charsheet_loadout.xml" />
+  <includefile source="strings/strings_otherscape.xml" />
+</root>

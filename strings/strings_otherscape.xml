@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <string name="charsheet_label_name_LabelCaption">Name</string>
+  <string name="charsheet_tabs_Tab_Themes">Themes</string>
+  <string name="charsheet_tabs_Tab_Loadout">Loadout</string>
+</root>

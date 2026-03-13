@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <windowclass name="charsheet_loadout">
+    <placement>
+      <size height="740" width="1180" />
+    </placement>
+    <sheetdata>
+      <genericcontrol name="loadout_frame"><frame name="groupbox" /><bounds>10,10,1080,420</bounds></genericcontrol>
+      <stringcontrol name="loadout_title"><bounds>20,18,100,20</bounds><static text="Loadout" /><font>sheetlabel</font><readonly /></stringcontrol>
+      <stringcontrol name="loadout_hdr_on"><bounds>24,48,30,20</bounds><center /><static text="On" /><readonly /></stringcontrol>
+      <stringcontrol name="loadout_hdr_item"><bounds>62,48,80,20</bounds><static text="Item" /><readonly /></stringcontrol>
+      <stringcontrol name="loadout_hdr_note"><bounds>660,48,80,20</bounds><static text="Note" /><readonly /></stringcontrol>
+
+      <checkbox name="loadout_item1_checked" source="loadout.item1.checked"><bounds>24,72,20,20</bounds></checkbox>
+      <stringfield name="loadout_item1_name" source="loadout.item1.name"><frame name="fieldlight" offset="7,5,7,5" /><bounds>58,70,580,22</bounds></stringfield>
+      <stringfield name="loadout_item1_note" source="loadout.item1.note"><frame name="fieldlight" offset="7,5,7,5" /><bounds>650,70,400,22</bounds></stringfield>
+
+      <checkbox name="loadout_item2_checked" source="loadout.item2.checked"><bounds>24,100,20,20</bounds></checkbox>
+      <stringfield name="loadout_item2_name" source="loadout.item2.name"><frame name="fieldlight" offset="7,5,7,5" /><bounds>58,98,580,22</bounds></stringfield>
+      <stringfield name="loadout_item2_note" source="loadout.item2.note"><frame name="fieldlight" offset="7,5,7,5" /><bounds>650,98,400,22</bounds></stringfield>
+
+      <checkbox name="loadout_item3_checked" source="loadout.item3.checked"><bounds>24,128,20,20</bounds></checkbox>
+      <stringfield name="loadout_item3_name" source="loadout.item3.name"><frame name="fieldlight" offset="7,5,7,5" /><bounds>58,126,580,22</bounds></stringfield>
+      <stringfield name="loadout_item3_note" source="loadout.item3.note"><frame name="fieldlight" offset="7,5,7,5" /><bounds>650,126,400,22</bounds></stringfield>
+
+      <checkbox name="loadout_item4_checked" source="loadout.item4.checked"><bounds>24,156,20,20</bounds></checkbox>
+      <stringfield name="loadout_item4_name" source="loadout.item4.name"><frame name="fieldlight" offset="7,5,7,5" /><bounds>58,154,580,22</bounds></stringfield>
+      <stringfield name="loadout_item4_note" source="loadout.item4.note"><frame name="fieldlight" offset="7,5,7,5" /><bounds>650,154,400,22</bounds></stringfield>
+
+      <checkbox name="loadout_item5_checked" source="loadout.item5.checked"><bounds>24,184,20,20</bounds></checkbox>
+      <stringfield name="loadout_item5_name" source="loadout.item5.name"><frame name="fieldlight" offset="7,5,7,5" /><bounds>58,182,580,22</bounds></stringfield>
+      <stringfield name="loadout_item5_note" source="loadout.item5.note"><frame name="fieldlight" offset="7,5,7,5" /><bounds>650,182,400,22</bounds></stringfield>
+
+      <checkbox name="loadout_item6_checked" source="loadout.item6.checked"><bounds>24,212,20,20</bounds></checkbox>
+      <stringfield name="loadout_item6_name" source="loadout.item6.name"><frame name="fieldlight" offset="7,5,7,5" /><bounds>58,210,580,22</bounds></stringfield>
+      <stringfield name="loadout_item6_note" source="loadout.item6.note"><frame name="fieldlight" offset="7,5,7,5" /><bounds>650,210,400,22</bounds></stringfield>
+
+      <checkbox name="loadout_item7_checked" source="loadout.item7.checked"><bounds>24,240,20,20</bounds></checkbox>
+      <stringfield name="loadout_item7_name" source="loadout.item7.name"><frame name="fieldlight" offset="7,5,7,5" /><bounds>58,238,580,22</bounds></stringfield>
+      <stringfield name="loadout_item7_note" source="loadout.item7.note"><frame name="fieldlight" offset="7,5,7,5" /><bounds>650,238,400,22</bounds></stringfield>
+
+      <checkbox name="loadout_item8_checked" source="loadout.item8.checked"><bounds>24,268,20,20</bounds></checkbox>
+      <stringfield name="loadout_item8_name" source="loadout.item8.name"><frame name="fieldlight" offset="7,5,7,5" /><bounds>58,266,580,22</bounds></stringfield>
+      <stringfield name="loadout_item8_note" source="loadout.item8.note"><frame name="fieldlight" offset="7,5,7,5" /><bounds>650,266,400,22</bounds></stringfield>
+    </sheetdata>
+  </windowclass>
+</root>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <windowclass name="charsheet">
+    <frame>charsheet</frame>
+    <placement>
+      <size height="860" width="1220" />
+    </placement>
+    <playercontrol />
+    <softclose />
+    <sizelimits resize="both">
+      <maximum width="1400" height="980" />
+      <minimum width="1220" height="860" />
+      <dynamic />
+    </sizelimits>
+    <tooltip field="name" />
+    <minimize>minimized_npc</minimize>
+    <sheetdata>
+      <subwindow name="themes">
+        <bounds>10,78,-10,-32</bounds>
+        <class>charsheet_themes</class>
+      </subwindow>
+      <subwindow name="loadout">
+        <bounds>10,78,-10,-32</bounds>
+        <class>charsheet_loadout</class>
+      </subwindow>
+
+      <picture_charsheet name="portrait">
+        <bounds>20,33,45,45</bounds>
+      </picture_charsheet>
+
+      <genericcontrol name="overviewframe">
+        <anchored>
+          <left anchor="right" parent="portrait" offset="8" />
+          <right offset="-212" />
+          <top offset="33" />
+          <size>
+            <height>47</height>
+          </size>
+        </anchored>
+      </genericcontrol>
+
+      <stringfield name="name">
+        <frame name="border" offset="5,0,0,0" />
+        <anchored>
+          <left anchor="left" parent="overviewframe" offset="31" />
+          <right offset="-251" />
+          <top offset="38" />
+          <size>
+            <height>25</height>
+          </size>
+        </anchored>
+        <font>reference-b-large</font>
+      </stringfield>
+
+      <stringcontrol name="label_name">
+        <anchored>
+          <left anchor="left" parent="overviewframe" offset="32" />
+          <top offset="59" />
+          <size>
+            <width>39</width>
+            <height>20</height>
+          </size>
+        </anchored>
+        <static textres="charsheet_label_name_LabelCaption" />
+        <font>sheetlabelinline</font>
+        <readonly />
+      </stringcontrol>
+
+      <close_base name="button_close">
+        <bounds>-51,0,24,24</bounds>
+        <icon normal="button_close" pressed="button_close_down" hover="button_close_hover" />
+        <font>button-white</font>
+      </close_base>
+
+      <genericcontrol name="resize">
+        <bounds>-23,-24,18,18</bounds>
+        <disabled />
+        <icon>window_resize</icon>
+      </genericcontrol>
+
+      <buttongroup_tabs name="tabs">
+        <frame name="tabs" />
+        <anchored>
+          <right offset="-12" />
+          <top offset="73" />
+          <size>
+            <width>18</width>
+            <height>145</height>
+          </size>
+        </anchored>
+        <tab>
+          <subwindow>themes</subwindow>
+          <textres>charsheet_tabs_Tab_Themes</textres>
+        </tab>
+        <tab>
+          <subwindow>loadout</subwindow>
+          <textres>charsheet_tabs_Tab_Loadout</textres>
+        </tab>
+      </buttongroup_tabs>
+
+      <windowmenubar_charsheet name="windowmenubar">
+        <bounds>15,6,-8,24</bounds>
+      </windowmenubar_charsheet>
+    </sheetdata>
+  </windowclass>
+</root>
