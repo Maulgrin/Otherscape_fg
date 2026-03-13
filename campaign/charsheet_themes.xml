@@ -16,6 +16,10 @@
         <static textres="otherscape_label_theme" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme1_name_frame">
+        <frame name="border" />
+        <bounds>65,38,300,22</bounds>
+      </genericcontrol>
       <stringfield name="theme1_name" source="themes.theme1.name">
         <bounds>65,38,300,22</bounds>
       </stringfield>
@@ -24,6 +28,10 @@
         <static textres="otherscape_label_family" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme1_family_frame">
+        <frame name="border" />
+        <bounds>425,38,105,22</bounds>
+      </genericcontrol>
       <button_stringcycler name="theme1_family" source="themes.theme1.family">
         <bounds>425,38,105,22</bounds>
         <parameters>
@@ -126,6 +134,10 @@
         <static textres="otherscape_label_identity" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme1_identity_frame">
+        <frame name="border" />
+        <bounds>85,310,445,22</bounds>
+      </genericcontrol>
       <stringfield name="theme1_identity" source="themes.theme1.identity">
         <bounds>85,310,445,22</bounds>
       </stringfield>
@@ -134,6 +146,10 @@
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme1_specialname_frame">
+        <frame name="border" />
+        <bounds>115,336,170,22</bounds>
+      </genericcontrol>
       <stringfield name="theme1_specialname" source="themes.theme1.specialname">
         <bounds>115,336,170,22</bounds>
       </stringfield>
@@ -142,12 +158,24 @@
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme1_upgrade1_frame">
+        <frame name="border" />
+        <bounds>380,336,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme1_upgrade1" source="themes.theme1.upgrade1">
         <bounds>380,336,20,20</bounds>
       </checkbox>
+      <genericcontrol name="theme1_upgrade2_frame">
+        <frame name="border" />
+        <bounds>406,336,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme1_upgrade2" source="themes.theme1.upgrade2">
         <bounds>406,336,20,20</bounds>
       </checkbox>
+      <genericcontrol name="theme1_upgrade3_frame">
+        <frame name="border" />
+        <bounds>432,336,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme1_upgrade3" source="themes.theme1.upgrade3">
         <bounds>432,336,20,20</bounds>
       </checkbox>
@@ -168,6 +196,10 @@
         <static textres="otherscape_label_theme" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme2_name_frame">
+        <frame name="border" />
+        <bounds>620,38,300,22</bounds>
+      </genericcontrol>
       <stringfield name="theme2_name" source="themes.theme2.name">
         <bounds>620,38,300,22</bounds>
       </stringfield>
@@ -176,6 +208,10 @@
         <static textres="otherscape_label_family" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme2_family_frame">
+        <frame name="border" />
+        <bounds>980,38,105,22</bounds>
+      </genericcontrol>
       <button_stringcycler name="theme2_family" source="themes.theme2.family">
         <bounds>980,38,105,22</bounds>
         <parameters>
@@ -278,6 +314,10 @@
         <static textres="otherscape_label_identity" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme2_identity_frame">
+        <frame name="border" />
+        <bounds>640,310,445,22</bounds>
+      </genericcontrol>
       <stringfield name="theme2_identity" source="themes.theme2.identity">
         <bounds>640,310,445,22</bounds>
       </stringfield>
@@ -286,6 +326,10 @@
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme2_specialname_frame">
+        <frame name="border" />
+        <bounds>670,336,170,22</bounds>
+      </genericcontrol>
       <stringfield name="theme2_specialname" source="themes.theme2.specialname">
         <bounds>670,336,170,22</bounds>
       </stringfield>
@@ -294,12 +338,24 @@
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme2_upgrade1_frame">
+        <frame name="border" />
+        <bounds>935,336,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme2_upgrade1" source="themes.theme2.upgrade1">
         <bounds>935,336,20,20</bounds>
       </checkbox>
+      <genericcontrol name="theme2_upgrade2_frame">
+        <frame name="border" />
+        <bounds>961,336,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme2_upgrade2" source="themes.theme2.upgrade2">
         <bounds>961,336,20,20</bounds>
       </checkbox>
+      <genericcontrol name="theme2_upgrade3_frame">
+        <frame name="border" />
+        <bounds>987,336,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme2_upgrade3" source="themes.theme2.upgrade3">
         <bounds>987,336,20,20</bounds>
       </checkbox>
@@ -320,6 +376,10 @@
         <static textres="otherscape_label_theme" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme3_name_frame">
+        <frame name="border" />
+        <bounds>65,443,300,22</bounds>
+      </genericcontrol>
       <stringfield name="theme3_name" source="themes.theme3.name">
         <bounds>65,443,300,22</bounds>
       </stringfield>
@@ -328,6 +388,10 @@
         <static textres="otherscape_label_family" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme3_family_frame">
+        <frame name="border" />
+        <bounds>425,443,105,22</bounds>
+      </genericcontrol>
       <button_stringcycler name="theme3_family" source="themes.theme3.family">
         <bounds>425,443,105,22</bounds>
         <parameters>
@@ -430,6 +494,10 @@
         <static textres="otherscape_label_identity" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme3_identity_frame">
+        <frame name="border" />
+        <bounds>85,715,445,22</bounds>
+      </genericcontrol>
       <stringfield name="theme3_identity" source="themes.theme3.identity">
         <bounds>85,715,445,22</bounds>
       </stringfield>
@@ -438,6 +506,10 @@
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme3_specialname_frame">
+        <frame name="border" />
+        <bounds>115,741,170,22</bounds>
+      </genericcontrol>
       <stringfield name="theme3_specialname" source="themes.theme3.specialname">
         <bounds>115,741,170,22</bounds>
       </stringfield>
@@ -446,12 +518,24 @@
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme3_upgrade1_frame">
+        <frame name="border" />
+        <bounds>380,741,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme3_upgrade1" source="themes.theme3.upgrade1">
         <bounds>380,741,20,20</bounds>
       </checkbox>
+      <genericcontrol name="theme3_upgrade2_frame">
+        <frame name="border" />
+        <bounds>406,741,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme3_upgrade2" source="themes.theme3.upgrade2">
         <bounds>406,741,20,20</bounds>
       </checkbox>
+      <genericcontrol name="theme3_upgrade3_frame">
+        <frame name="border" />
+        <bounds>432,741,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme3_upgrade3" source="themes.theme3.upgrade3">
         <bounds>432,741,20,20</bounds>
       </checkbox>
@@ -472,6 +556,10 @@
         <static textres="otherscape_label_theme" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme4_name_frame">
+        <frame name="border" />
+        <bounds>620,443,300,22</bounds>
+      </genericcontrol>
       <stringfield name="theme4_name" source="themes.theme4.name">
         <bounds>620,443,300,22</bounds>
       </stringfield>
@@ -480,6 +568,10 @@
         <static textres="otherscape_label_family" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme4_family_frame">
+        <frame name="border" />
+        <bounds>980,443,105,22</bounds>
+      </genericcontrol>
       <button_stringcycler name="theme4_family" source="themes.theme4.family">
         <bounds>980,443,105,22</bounds>
         <parameters>
@@ -582,6 +674,10 @@
         <static textres="otherscape_label_identity" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme4_identity_frame">
+        <frame name="border" />
+        <bounds>640,715,445,22</bounds>
+      </genericcontrol>
       <stringfield name="theme4_identity" source="themes.theme4.identity">
         <bounds>640,715,445,22</bounds>
       </stringfield>
@@ -590,6 +686,10 @@
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme4_specialname_frame">
+        <frame name="border" />
+        <bounds>670,741,170,22</bounds>
+      </genericcontrol>
       <stringfield name="theme4_specialname" source="themes.theme4.specialname">
         <bounds>670,741,170,22</bounds>
       </stringfield>
@@ -598,12 +698,24 @@
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
+      <genericcontrol name="theme4_upgrade1_frame">
+        <frame name="border" />
+        <bounds>935,741,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme4_upgrade1" source="themes.theme4.upgrade1">
         <bounds>935,741,20,20</bounds>
       </checkbox>
+      <genericcontrol name="theme4_upgrade2_frame">
+        <frame name="border" />
+        <bounds>961,741,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme4_upgrade2" source="themes.theme4.upgrade2">
         <bounds>961,741,20,20</bounds>
       </checkbox>
+      <genericcontrol name="theme4_upgrade3_frame">
+        <frame name="border" />
+        <bounds>987,741,20,20</bounds>
+      </genericcontrol>
       <checkbox name="theme4_upgrade3" source="themes.theme4.upgrade3">
         <bounds>987,741,20,20</bounds>
       </checkbox>
