@@ -1076,7 +1076,7 @@
         <bounds>20,450,300,320</bounds>
       </genericcontrol>
       <stringcontrol name="loadout_title">
-        <bounds>30,456,100,20</bounds>
+        <bounds>120,455,100,20</bounds>
         <static textres="otherscape_label_loadout" />
         <readonly />
       </stringcontrol>
