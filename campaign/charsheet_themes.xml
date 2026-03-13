@@ -1090,126 +1090,126 @@
       </formattedtextfield>
       <genericcontrol name="loadout_frame">
         <frame name="groupbox" />
-        <bounds>20,450,300,320</bounds>
+        <bounds>640,38,300,320</bounds>
       </genericcontrol>
       <stringcontrol name="loadout_title">
-        <bounds>120,455,100,20</bounds>
+        <bounds>740,43,100,20</bounds>
         <static textres="otherscape_label_loadout" />
         <readonly />
       </stringcontrol>
       <stringcontrol name="loadout_hdr_on">
-        <bounds>34,484,30,20</bounds>
+        <bounds>654,72,30,20</bounds>
         <static textres="otherscape_label_on" />
         <readonly />
       </stringcontrol>
       <stringcontrol name="loadout_hdr_item">
-        <bounds>68,484,80,20</bounds>
+        <bounds>688,72,80,20</bounds>
         <static textres="otherscape_label_item" />
         <readonly />
       </stringcontrol>
       <genericcontrol name="loadout_item1_rowframe">
         <frame name="border" />
-        <bounds>74,504,172,22</bounds>
+        <bounds>694,92,172,22</bounds>
       </genericcontrol>
       <button_checkbox name="loadout_item1_checked" source="loadout.item1.checked">
-        <bounds>34,506,20,20</bounds>
+        <bounds>654,94,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item1_name" source="loadout.item1.name">
-        <bounds>74,504,172,22</bounds>
+        <bounds>694,92,172,22</bounds>
       </stringfield>
       <button_checkbox name="loadout_item1_checked_after" source="loadout.item1.burned">
-        <bounds>250,506,20,20</bounds>
+        <bounds>870,94,20,20</bounds>
       </button_checkbox>
       <genericcontrol name="loadout_item2_rowframe">
         <frame name="border" />
-        <bounds>74,532,172,22</bounds>
+        <bounds>694,120,172,22</bounds>
       </genericcontrol>
       <button_checkbox name="loadout_item2_checked" source="loadout.item2.checked">
-        <bounds>34,534,20,20</bounds>
+        <bounds>654,122,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item2_name" source="loadout.item2.name">
-        <bounds>74,532,172,22</bounds>
+        <bounds>694,120,172,22</bounds>
       </stringfield>
       <button_checkbox name="loadout_item2_checked_after" source="loadout.item2.burned">
-        <bounds>250,534,20,20</bounds>
+        <bounds>870,122,20,20</bounds>
       </button_checkbox>
       <genericcontrol name="loadout_item3_rowframe">
         <frame name="border" />
-        <bounds>74,560,172,22</bounds>
+        <bounds>694,148,172,22</bounds>
       </genericcontrol>
       <button_checkbox name="loadout_item3_checked" source="loadout.item3.checked">
-        <bounds>34,562,20,20</bounds>
+        <bounds>654,150,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item3_name" source="loadout.item3.name">
-        <bounds>74,560,172,22</bounds>
+        <bounds>694,148,172,22</bounds>
       </stringfield>
       <button_checkbox name="loadout_item3_checked_after" source="loadout.item3.burned">
-        <bounds>250,562,20,20</bounds>
+        <bounds>870,150,20,20</bounds>
       </button_checkbox>
       <genericcontrol name="loadout_item4_rowframe">
         <frame name="border" />
-        <bounds>74,588,172,22</bounds>
+        <bounds>694,176,172,22</bounds>
       </genericcontrol>
       <button_checkbox name="loadout_item4_checked" source="loadout.item4.checked">
-        <bounds>34,590,20,20</bounds>
+        <bounds>654,178,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item4_name" source="loadout.item4.name">
-        <bounds>74,588,172,22</bounds>
+        <bounds>694,176,172,22</bounds>
       </stringfield>
       <button_checkbox name="loadout_item4_checked_after" source="loadout.item4.burned">
-        <bounds>250,590,20,20</bounds>
+        <bounds>870,178,20,20</bounds>
       </button_checkbox>
       <genericcontrol name="loadout_item5_rowframe">
         <frame name="border" />
-        <bounds>74,616,172,22</bounds>
+        <bounds>694,204,172,22</bounds>
       </genericcontrol>
       <button_checkbox name="loadout_item5_checked" source="loadout.item5.checked">
-        <bounds>34,618,20,20</bounds>
+        <bounds>654,206,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item5_name" source="loadout.item5.name">
-        <bounds>74,616,172,22</bounds>
+        <bounds>694,204,172,22</bounds>
       </stringfield>
       <button_checkbox name="loadout_item5_checked_after" source="loadout.item5.burned">
-        <bounds>250,618,20,20</bounds>
+        <bounds>870,206,20,20</bounds>
       </button_checkbox>
       <genericcontrol name="loadout_item6_rowframe">
         <frame name="border" />
-        <bounds>74,644,172,22</bounds>
+        <bounds>694,232,172,22</bounds>
       </genericcontrol>
       <button_checkbox name="loadout_item6_checked" source="loadout.item6.checked">
-        <bounds>34,646,20,20</bounds>
+        <bounds>654,234,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item6_name" source="loadout.item6.name">
-        <bounds>74,644,172,22</bounds>
+        <bounds>694,232,172,22</bounds>
       </stringfield>
       <button_checkbox name="loadout_item6_checked_after" source="loadout.item6.burned">
-        <bounds>250,646,20,20</bounds>
+        <bounds>870,234,20,20</bounds>
       </button_checkbox>
       <genericcontrol name="loadout_item7_rowframe">
         <frame name="border" />
-        <bounds>74,672,172,22</bounds>
+        <bounds>694,260,172,22</bounds>
       </genericcontrol>
       <button_checkbox name="loadout_item7_checked" source="loadout.item7.checked">
-        <bounds>34,674,20,20</bounds>
+        <bounds>654,262,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item7_name" source="loadout.item7.name">
-        <bounds>74,672,172,22</bounds>
+        <bounds>694,260,172,22</bounds>
       </stringfield>
       <button_checkbox name="loadout_item7_checked_after" source="loadout.item7.burned">
-        <bounds>250,674,20,20</bounds>
+        <bounds>870,262,20,20</bounds>
       </button_checkbox>
       <genericcontrol name="loadout_item8_rowframe">
         <frame name="border" />
-        <bounds>74,700,172,22</bounds>
+        <bounds>694,288,172,22</bounds>
       </genericcontrol>
       <button_checkbox name="loadout_item8_checked" source="loadout.item8.checked">
-        <bounds>34,702,20,20</bounds>
+        <bounds>654,290,20,20</bounds>
       </button_checkbox>
       <stringfield name="loadout_item8_name" source="loadout.item8.name">
-        <bounds>74,700,172,22</bounds>
+        <bounds>694,288,172,22</bounds>
       </stringfield>
       <button_checkbox name="loadout_item8_checked_after" source="loadout.item8.burned">
-        <bounds>250,702,20,20</bounds>
+        <bounds>870,290,20,20</bounds>
       </button_checkbox>
     </sheetdata>
   </windowclass>
