@@ -3,13 +3,12 @@
   <windowclass name="charsheet">
     <frame>charsheet</frame>
     <placement>
-      <size height="860" width="1220" />
+      <size width="1180" height="950" />
     </placement>
     <playercontrol />
     <softclose />
-    <sizelimits resize="both">
-      <maximum width="1400" height="980" />
-      <minimum width="1220" height="860" />
+    <sizelimits>
+      <minimum width="1180" height="950" />
       <dynamic />
     </sizelimits>
     <tooltip field="name" />
@@ -57,11 +56,11 @@
           <left anchor="left" parent="overviewframe" offset="32" />
           <top offset="59" />
           <size>
-            <width>39</width>
+            <width>45</width>
             <height>20</height>
           </size>
         </anchored>
-        <static textres="charsheet_label_name_LabelCaption" />
+        <static textres="otherscape_label_name" />
         <font>sheetlabelinline</font>
         <readonly />
       </stringcontrol>
@@ -85,16 +84,16 @@
           <top offset="73" />
           <size>
             <width>18</width>
-            <height>145</height>
+            <height>180</height>
           </size>
         </anchored>
         <tab>
           <subwindow>themes</subwindow>
-          <textres>charsheet_tabs_Tab_Themes</textres>
+          <textres>otherscape_tab_themes</textres>
         </tab>
         <tab>
           <subwindow>loadout</subwindow>
-          <textres>charsheet_tabs_Tab_Loadout</textres>
+          <textres>otherscape_tab_loadout</textres>
         </tab>
       </buttongroup_tabs>
 

@@ -1,39 +1,25 @@
-Otherscape Fantasy Grounds Sheet v0.1
+Otherscape FG Sheet v0.2 (tightened package)
 
-Contents
-- base.xml
-- campaign/charsheet.xml
-- campaign/charsheet_themes.xml
-- campaign/charsheet_loadout.xml
-- strings/strings_otherscape.xml
+What changed from the first pass:
+- Reduced the project to a clean CoreRPG child ruleset package
+- Uses a simple two-tab character sheet: Themes and Loadout
+- Uses fixed controls and predictable DB paths only
+- Removes unnecessary placeholders and keeps the XML easy to extend
+- Theme family selector uses a proper CoreRPG button_stringcycler
 
-What this package does
-- Creates a CoreRPG-derived character sheet with two tabs:
-  - Themes
-  - Loadout
-- Themes tab includes 4 fixed Otherscape theme cards.
-- Each theme card includes:
-  - Theme name
-  - Family dropdown (Mythos / Self / Noise)
-  - 6 tag rows with Active and Weakness checkboxes
-  - Identity field
-  - Theme Special name
-  - Theme Special text
-  - 3 upgrade checkboxes
-- Loadout tab includes 8 fixed rows with:
-  - On checkbox
-  - Item name
-  - Note
+Key windowclasses:
+- charsheet
+- charsheet_themes
+- charsheet_loadout
 
-How to use
-1. Unzip this folder into a new FG ruleset folder, or merge these files into your existing ruleset.
-2. If merging into an existing ruleset:
-   - add the includefile lines from base.xml
-   - make sure your existing charsheet windowclass is replaced or merged with campaign/charsheet.xml
-   - include the strings file
-3. Launch Fantasy Grounds and create/open a character.
+Key DB paths:
+- themes.theme1..theme4
+- loadout.item1..item8
 
-Notes
-- This is intentionally v0.1 and focuses only on Themes and Loadout.
-- No tag power automation is included yet.
-- No tag combos, rules reference, portrait styling, or family summary counters yet.
+Notes:
+- This package is intentionally manual-entry focused.
+- No automation has been added for power counting, theme balancing, or tag combos yet.
+- If your existing ruleset already has custom strings, fonts, or graphics, this package should still load because it inherits from CoreRPG.
+
+
+Version note: Theme cards now use 8 bordered rows each (6 power tag rows, 2 weakness tag rows), with one checkbox per row.

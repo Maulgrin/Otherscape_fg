@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <string name="charsheet_label_name_LabelCaption">Name</string>
-  <string name="charsheet_tabs_Tab_Themes">Themes</string>
-  <string name="charsheet_tabs_Tab_Loadout">Loadout</string>
+  <string name="otherscape_tab_themes">Themes</string>
+  <string name="otherscape_tab_loadout">Loadout</string>
+  <string name="otherscape_label_name">Name</string>
+  <string name="otherscape_label_theme">Theme</string>
+  <string name="otherscape_label_family">Family</string>
+  <string name="otherscape_label_tags">Tags</string>
+  <string name="otherscape_label_identity">Identity</string>
+  <string name="otherscape_label_special">Theme Special</string>
+  <string name="otherscape_label_upgrades">Upgrades</string>
+  <string name="otherscape_label_loadout">Loadout</string>
+  <string name="otherscape_label_on">On</string>
+  <string name="otherscape_label_item">Item</string>
+  <string name="otherscape_label_note">Note</string>
+  <string name="otherscape_family_mythos">Mythos</string>
+  <string name="otherscape_family_self">Self</string>
+  <string name="otherscape_family_noise">Noise</string>
 </root>

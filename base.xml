@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root version="3.0" release="0">
   <description>
-    <text>Otherscape Fantasy Grounds sheet v0.1 - Themes and Loadout</text>
-    <author>OpenAI for Todd Beaumont</author>
+    <displayname>Otherscape FG Sheet</displayname>
+    <author>OpenAI</author>
+    <website>https://www.fantasygrounds.com</website>
   </description>
   <importruleset source="CoreRPG" />
   <importinfo>
