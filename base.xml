@@ -23,7 +23,10 @@
     <offset>24,12,24,12</offset>
   </framedef>
 
+  <includefile source="graphics/frames/charsheet.png" />
+
   <includefile source="campaign/charsheet.xml" />
   <includefile source="campaign/charsheet_themes.xml" />
   <includefile source="strings/strings_otherscape.xml" />
+  
 </root>
