@@ -1,55 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <template name="os_checkbox">
-    <buttonfield>
-      <font>sheetlabelinline</font>
-      <state>
-        <frame name="border" />
-      </state>
-      <state>
-        <frame name="border" />
-        <text>X</text>
-      </state>
-    </buttonfield>
-  </template>
   <windowclass name="charsheet_themes">
+    <script>
+      local function getIdentityLabelForFamily(sFamily)
+        if sFamily == "Self" then
+          return "Identity";
+        elseif sFamily == "Noise" then
+          return "Itch";
+        elseif sFamily == "Mythos" then
+          return "Ritual";
+        end
+        return "NA";
+      end
+
+      function updateTheme1IdentityLabel()
+        theme1_identity_label.setValue(getIdentityLabelForFamily(theme1_family.getValue()));
+      end
+
+      function updateTheme2IdentityLabel()
+        theme2_identity_label.setValue(getIdentityLabelForFamily(theme2_family.getValue()));
+      end
+
+      function updateTheme3IdentityLabel()
+        theme3_identity_label.setValue(getIdentityLabelForFamily(theme3_family.getValue()));
+      end
+
+      function updateTheme4IdentityLabel()
+        theme4_identity_label.setValue(getIdentityLabelForFamily(theme4_family.getValue()));
+      end
+
+      function onInit()
+        updateTheme1IdentityLabel();
+        updateTheme2IdentityLabel();
+        updateTheme3IdentityLabel();
+        updateTheme4IdentityLabel();
+      end
+    </script>
     <sheetdata>
       <genericcontrol name="theme1_frame">
         <frame name="groupbox" />
-        <bounds>10,10,540,392</bounds>
+        <bounds>10,10,432,392</bounds>
       </genericcontrol>
       <stringcontrol name="theme1_cardlabel">
         <bounds>20,16,80,20</bounds>
         <static text="Theme 1" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <stringcontrol name="theme1_name_label">
         <bounds>20,40,45,20</bounds>
         <static textres="otherscape_label_theme" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <genericcontrol name="theme1_name_frame">
         <frame name="border" />
-        <bounds>65,38,300,22</bounds>
+        <bounds>65,38,250,22</bounds>
       </genericcontrol>
       <stringfield name="theme1_name" source="themes.theme1.name">
-        <bounds>65,38,300,22</bounds>
+        <bounds>65,38,150,22</bounds>
       </stringfield>
       <stringcontrol name="theme1_family_label">
         <bounds>375,40,45,20</bounds>
         <static textres="otherscape_label_family" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <genericcontrol name="theme1_family_frame">
         <frame name="border" />
-        <bounds>425,38,105,22</bounds>
+        <bounds>321,38,105,22</bounds>
       </genericcontrol>
       <button_stringcycler name="theme1_family" source="themes.theme1.family">
-        <bounds>425,38,105,22</bounds>
+        <bounds>321,38,105,22</bounds>
         <parameters>
           <labelsres>otherscape_family_mythos|otherscape_family_self|otherscape_family_noise</labelsres>
           <values>Mythos|Self|Noise</values>
         </parameters>
+        <script>
+          function onValueChanged()
+            window.updateTheme1IdentityLabel();
+          end
+        </script>
       </button_stringcycler>
       <stringcontrol name="theme1_powertags_label">
         <bounds>20,68,90,20</bounds>
@@ -58,63 +89,63 @@
       </stringcontrol>
       <genericcontrol name="theme1_tag1_frame">
         <frame name="border" />
-        <bounds>44,88,486,22</bounds>
+        <bounds>44,88,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme1_tag1_checked" source="themes.theme1.tags.tag1.checked">
+      <button_checkbox name="theme1_tag1_checked" source="themes.theme1.tags.tag1.checked">
         <bounds>20,89,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme1_tag1_name" source="themes.theme1.tags.tag1.name">
-        <bounds>50,88,476,22</bounds>
+        <bounds>50,88,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme1_tag2_frame">
         <frame name="border" />
-        <bounds>44,112,486,22</bounds>
+        <bounds>44,112,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme1_tag2_checked" source="themes.theme1.tags.tag2.checked">
+      <button_checkbox name="theme1_tag2_checked" source="themes.theme1.tags.tag2.checked">
         <bounds>20,113,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme1_tag2_name" source="themes.theme1.tags.tag2.name">
-        <bounds>50,112,476,22</bounds>
+        <bounds>50,112,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme1_tag3_frame">
         <frame name="border" />
-        <bounds>44,136,486,22</bounds>
+        <bounds>44,136,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme1_tag3_checked" source="themes.theme1.tags.tag3.checked">
+      <button_checkbox name="theme1_tag3_checked" source="themes.theme1.tags.tag3.checked">
         <bounds>20,137,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme1_tag3_name" source="themes.theme1.tags.tag3.name">
-        <bounds>50,136,476,22</bounds>
+        <bounds>50,136,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme1_tag4_frame">
         <frame name="border" />
-        <bounds>44,160,486,22</bounds>
+        <bounds>44,160,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme1_tag4_checked" source="themes.theme1.tags.tag4.checked">
+      <button_checkbox name="theme1_tag4_checked" source="themes.theme1.tags.tag4.checked">
         <bounds>20,161,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme1_tag4_name" source="themes.theme1.tags.tag4.name">
-        <bounds>50,160,476,22</bounds>
+        <bounds>50,160,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme1_tag5_frame">
         <frame name="border" />
-        <bounds>44,184,486,22</bounds>
+        <bounds>44,184,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme1_tag5_checked" source="themes.theme1.tags.tag5.checked">
+      <button_checkbox name="theme1_tag5_checked" source="themes.theme1.tags.tag5.checked">
         <bounds>20,185,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme1_tag5_name" source="themes.theme1.tags.tag5.name">
-        <bounds>50,184,476,22</bounds>
+        <bounds>50,184,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme1_tag6_frame">
         <frame name="border" />
-        <bounds>44,208,486,22</bounds>
+        <bounds>44,208,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme1_tag6_checked" source="themes.theme1.tags.tag6.checked">
+      <button_checkbox name="theme1_tag6_checked" source="themes.theme1.tags.tag6.checked">
         <bounds>20,209,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme1_tag6_name" source="themes.theme1.tags.tag6.name">
-        <bounds>50,208,476,22</bounds>
+        <bounds>50,208,301,22</bounds>
       </stringfield>
       <stringcontrol name="theme1_weaknesstags_label">
         <bounds>20,238,110,20</bounds>
@@ -123,23 +154,23 @@
       </stringcontrol>
       <genericcontrol name="theme1_tag7_frame">
         <frame name="border" />
-        <bounds>44,258,486,22</bounds>
+        <bounds>44,258,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme1_tag7_checked" source="themes.theme1.tags.tag7.checked">
+      <button_checkbox name="theme1_tag7_checked" source="themes.theme1.tags.tag7.checked">
         <bounds>20,259,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme1_tag7_name" source="themes.theme1.tags.tag7.name">
-        <bounds>50,258,476,22</bounds>
+        <bounds>50,258,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme1_tag8_frame">
         <frame name="border" />
-        <bounds>44,282,486,22</bounds>
+        <bounds>44,282,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme1_tag8_checked" source="themes.theme1.tags.tag8.checked">
+      <button_checkbox name="theme1_tag8_checked" source="themes.theme1.tags.tag8.checked">
         <bounds>20,283,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme1_tag8_name" source="themes.theme1.tags.tag8.name">
-        <bounds>50,282,476,22</bounds>
+        <bounds>50,282,301,22</bounds>
       </stringfield>
       <stringcontrol name="theme1_identity_label">
         <bounds>20,312,60,20</bounds>
@@ -148,10 +179,10 @@
       </stringcontrol>
       <genericcontrol name="theme1_identity_frame">
         <frame name="border" />
-        <bounds>85,310,445,22</bounds>
+        <bounds>85,310,341,22</bounds>
       </genericcontrol>
       <stringfield name="theme1_identity" source="themes.theme1.identity">
-        <bounds>85,310,445,22</bounds>
+        <bounds>85,310,341,22</bounds>
       </stringfield>
       <stringcontrol name="theme1_specialname_label">
         <bounds>20,338,90,20</bounds>
@@ -160,232 +191,248 @@
       </stringcontrol>
       <genericcontrol name="theme1_specialname_frame">
         <frame name="border" />
-        <bounds>115,336,170,22</bounds>
+        <bounds>115,336,311,22</bounds>
       </genericcontrol>
       <stringfield name="theme1_specialname" source="themes.theme1.specialname">
-        <bounds>115,336,170,22</bounds>
+        <bounds>115,336,311,22</bounds>
       </stringfield>
       <stringcontrol name="theme1_upgrades_label">
-        <bounds>310,338,60,20</bounds>
+        <bounds>20,360,60,20</bounds>
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
-      <os_checkbox name="theme1_upgrade1" source="themes.theme1.upgrade1">
-        <bounds>380,336,20,20</bounds>
-      </os_checkbox>
-      <os_checkbox name="theme1_upgrade2" source="themes.theme1.upgrade2">
-        <bounds>406,336,20,20</bounds>
-      </os_checkbox>
-      <os_checkbox name="theme1_upgrade3" source="themes.theme1.upgrade3">
-        <bounds>432,336,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme1_upgrade1" source="themes.theme1.upgrade1">
+        <bounds>85,358,20,20</bounds>
+      </button_checkbox>
+      <button_checkbox name="theme1_upgrade2" source="themes.theme1.upgrade2">
+        <bounds>111,358,20,20</bounds>
+      </button_checkbox>
+      <button_checkbox name="theme1_upgrade3" source="themes.theme1.upgrade3">
+        <bounds>137,358,20,20</bounds>
+      </button_checkbox>
       <formattedtext name="theme1_specialtext" source="themes.theme1.specialtext">
-        <bounds>20,364,510,34</bounds>
+        <bounds>20,382,406,16</bounds>
       </formattedtext>
       <genericcontrol name="theme2_frame">
         <frame name="groupbox" />
-        <bounds>565,10,540,392</bounds>
+        <bounds>470,10,432,392</bounds>
       </genericcontrol>
       <stringcontrol name="theme2_cardlabel">
-        <bounds>575,16,80,20</bounds>
+        <bounds>480,16,80,20</bounds>
         <static text="Theme 2" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <stringcontrol name="theme2_name_label">
-        <bounds>575,40,45,20</bounds>
+        <bounds>480,40,45,20</bounds>
         <static textres="otherscape_label_theme" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <genericcontrol name="theme2_name_frame">
         <frame name="border" />
-        <bounds>620,38,300,22</bounds>
+        <bounds>525,38,250,22</bounds>
       </genericcontrol>
       <stringfield name="theme2_name" source="themes.theme2.name">
-        <bounds>620,38,300,22</bounds>
+        <bounds>525,38,150,22</bounds>
       </stringfield>
       <stringcontrol name="theme2_family_label">
-        <bounds>930,40,45,20</bounds>
+        <bounds>835,40,45,20</bounds>
         <static textres="otherscape_label_family" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <genericcontrol name="theme2_family_frame">
         <frame name="border" />
-        <bounds>980,38,105,22</bounds>
+        <bounds>781,38,105,22</bounds>
       </genericcontrol>
       <button_stringcycler name="theme2_family" source="themes.theme2.family">
-        <bounds>980,38,105,22</bounds>
+        <bounds>781,38,105,22</bounds>
         <parameters>
           <labelsres>otherscape_family_mythos|otherscape_family_self|otherscape_family_noise</labelsres>
           <values>Mythos|Self|Noise</values>
         </parameters>
+        <script>
+          function onValueChanged()
+            window.updateTheme2IdentityLabel();
+          end
+        </script>
       </button_stringcycler>
       <stringcontrol name="theme2_powertags_label">
-        <bounds>575,68,90,20</bounds>
+        <bounds>480,68,90,20</bounds>
         <static text="Power Tags" />
         <readonly />
       </stringcontrol>
       <genericcontrol name="theme2_tag1_frame">
         <frame name="border" />
-        <bounds>599,88,486,22</bounds>
+        <bounds>504,88,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme2_tag1_checked" source="themes.theme2.tags.tag1.checked">
-        <bounds>575,89,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme2_tag1_checked" source="themes.theme2.tags.tag1.checked">
+        <bounds>480,89,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme2_tag1_name" source="themes.theme2.tags.tag1.name">
-        <bounds>605,88,476,22</bounds>
+        <bounds>510,88,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme2_tag2_frame">
         <frame name="border" />
-        <bounds>599,112,486,22</bounds>
+        <bounds>504,112,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme2_tag2_checked" source="themes.theme2.tags.tag2.checked">
-        <bounds>575,113,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme2_tag2_checked" source="themes.theme2.tags.tag2.checked">
+        <bounds>480,113,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme2_tag2_name" source="themes.theme2.tags.tag2.name">
-        <bounds>605,112,476,22</bounds>
+        <bounds>510,112,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme2_tag3_frame">
         <frame name="border" />
-        <bounds>599,136,486,22</bounds>
+        <bounds>504,136,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme2_tag3_checked" source="themes.theme2.tags.tag3.checked">
-        <bounds>575,137,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme2_tag3_checked" source="themes.theme2.tags.tag3.checked">
+        <bounds>480,137,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme2_tag3_name" source="themes.theme2.tags.tag3.name">
-        <bounds>605,136,476,22</bounds>
+        <bounds>510,136,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme2_tag4_frame">
         <frame name="border" />
-        <bounds>599,160,486,22</bounds>
+        <bounds>504,160,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme2_tag4_checked" source="themes.theme2.tags.tag4.checked">
-        <bounds>575,161,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme2_tag4_checked" source="themes.theme2.tags.tag4.checked">
+        <bounds>480,161,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme2_tag4_name" source="themes.theme2.tags.tag4.name">
-        <bounds>605,160,476,22</bounds>
+        <bounds>510,160,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme2_tag5_frame">
         <frame name="border" />
-        <bounds>599,184,486,22</bounds>
+        <bounds>504,184,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme2_tag5_checked" source="themes.theme2.tags.tag5.checked">
-        <bounds>575,185,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme2_tag5_checked" source="themes.theme2.tags.tag5.checked">
+        <bounds>480,185,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme2_tag5_name" source="themes.theme2.tags.tag5.name">
-        <bounds>605,184,476,22</bounds>
+        <bounds>510,184,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme2_tag6_frame">
         <frame name="border" />
-        <bounds>599,208,486,22</bounds>
+        <bounds>504,208,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme2_tag6_checked" source="themes.theme2.tags.tag6.checked">
-        <bounds>575,209,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme2_tag6_checked" source="themes.theme2.tags.tag6.checked">
+        <bounds>480,209,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme2_tag6_name" source="themes.theme2.tags.tag6.name">
-        <bounds>605,208,476,22</bounds>
+        <bounds>510,208,301,22</bounds>
       </stringfield>
       <stringcontrol name="theme2_weaknesstags_label">
-        <bounds>575,238,110,20</bounds>
+        <bounds>480,238,110,20</bounds>
         <static text="Weakness Tags" />
         <readonly />
       </stringcontrol>
       <genericcontrol name="theme2_tag7_frame">
         <frame name="border" />
-        <bounds>599,258,486,22</bounds>
+        <bounds>504,258,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme2_tag7_checked" source="themes.theme2.tags.tag7.checked">
-        <bounds>575,259,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme2_tag7_checked" source="themes.theme2.tags.tag7.checked">
+        <bounds>480,259,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme2_tag7_name" source="themes.theme2.tags.tag7.name">
-        <bounds>605,258,476,22</bounds>
+        <bounds>510,258,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme2_tag8_frame">
         <frame name="border" />
-        <bounds>599,282,486,22</bounds>
+        <bounds>504,282,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme2_tag8_checked" source="themes.theme2.tags.tag8.checked">
-        <bounds>575,283,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme2_tag8_checked" source="themes.theme2.tags.tag8.checked">
+        <bounds>480,283,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme2_tag8_name" source="themes.theme2.tags.tag8.name">
-        <bounds>605,282,476,22</bounds>
+        <bounds>510,282,301,22</bounds>
       </stringfield>
       <stringcontrol name="theme2_identity_label">
-        <bounds>575,312,60,20</bounds>
+        <bounds>480,312,60,20</bounds>
         <static textres="otherscape_label_identity" />
         <readonly />
       </stringcontrol>
       <genericcontrol name="theme2_identity_frame">
         <frame name="border" />
-        <bounds>640,310,445,22</bounds>
+        <bounds>545,310,341,22</bounds>
       </genericcontrol>
       <stringfield name="theme2_identity" source="themes.theme2.identity">
-        <bounds>640,310,445,22</bounds>
+        <bounds>545,310,341,22</bounds>
       </stringfield>
       <stringcontrol name="theme2_specialname_label">
-        <bounds>575,338,90,20</bounds>
+        <bounds>480,338,90,20</bounds>
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
       <genericcontrol name="theme2_specialname_frame">
         <frame name="border" />
-        <bounds>670,336,170,22</bounds>
+        <bounds>575,336,311,22</bounds>
       </genericcontrol>
       <stringfield name="theme2_specialname" source="themes.theme2.specialname">
-        <bounds>670,336,170,22</bounds>
+        <bounds>575,336,311,22</bounds>
       </stringfield>
       <stringcontrol name="theme2_upgrades_label">
-        <bounds>865,338,60,20</bounds>
+        <bounds>480,360,60,20</bounds>
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
-      <os_checkbox name="theme2_upgrade1" source="themes.theme2.upgrade1">
-        <bounds>935,336,20,20</bounds>
-      </os_checkbox>
-      <os_checkbox name="theme2_upgrade2" source="themes.theme2.upgrade2">
-        <bounds>961,336,20,20</bounds>
-      </os_checkbox>
-      <os_checkbox name="theme2_upgrade3" source="themes.theme2.upgrade3">
-        <bounds>987,336,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme2_upgrade1" source="themes.theme2.upgrade1">
+        <bounds>545,358,20,20</bounds>
+      </button_checkbox>
+      <button_checkbox name="theme2_upgrade2" source="themes.theme2.upgrade2">
+        <bounds>571,358,20,20</bounds>
+      </button_checkbox>
+      <button_checkbox name="theme2_upgrade3" source="themes.theme2.upgrade3">
+        <bounds>597,358,20,20</bounds>
+      </button_checkbox>
       <formattedtext name="theme2_specialtext" source="themes.theme2.specialtext">
-        <bounds>575,364,510,34</bounds>
+        <bounds>480,382,406,16</bounds>
       </formattedtext>
       <genericcontrol name="theme3_frame">
         <frame name="groupbox" />
-        <bounds>10,415,540,392</bounds>
+        <bounds>10,415,432,392</bounds>
       </genericcontrol>
       <stringcontrol name="theme3_cardlabel">
         <bounds>20,421,80,20</bounds>
         <static text="Theme 3" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <stringcontrol name="theme3_name_label">
         <bounds>20,445,45,20</bounds>
         <static textres="otherscape_label_theme" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <genericcontrol name="theme3_name_frame">
         <frame name="border" />
-        <bounds>65,443,300,22</bounds>
+        <bounds>65,443,250,22</bounds>
       </genericcontrol>
       <stringfield name="theme3_name" source="themes.theme3.name">
-        <bounds>65,443,300,22</bounds>
+        <bounds>65,443,150,22</bounds>
       </stringfield>
       <stringcontrol name="theme3_family_label">
         <bounds>375,445,45,20</bounds>
         <static textres="otherscape_label_family" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <genericcontrol name="theme3_family_frame">
         <frame name="border" />
-        <bounds>425,443,105,22</bounds>
+        <bounds>321,443,105,22</bounds>
       </genericcontrol>
       <button_stringcycler name="theme3_family" source="themes.theme3.family">
-        <bounds>425,443,105,22</bounds>
+        <bounds>321,443,105,22</bounds>
         <parameters>
           <labelsres>otherscape_family_mythos|otherscape_family_self|otherscape_family_noise</labelsres>
           <values>Mythos|Self|Noise</values>
         </parameters>
+        <script>
+          function onValueChanged()
+            window.updateTheme3IdentityLabel();
+          end
+        </script>
       </button_stringcycler>
       <stringcontrol name="theme3_powertags_label">
         <bounds>20,473,90,20</bounds>
@@ -394,63 +441,63 @@
       </stringcontrol>
       <genericcontrol name="theme3_tag1_frame">
         <frame name="border" />
-        <bounds>44,493,486,22</bounds>
+        <bounds>44,493,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme3_tag1_checked" source="themes.theme3.tags.tag1.checked">
+      <button_checkbox name="theme3_tag1_checked" source="themes.theme3.tags.tag1.checked">
         <bounds>20,494,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme3_tag1_name" source="themes.theme3.tags.tag1.name">
-        <bounds>50,493,476,22</bounds>
+        <bounds>50,493,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme3_tag2_frame">
         <frame name="border" />
-        <bounds>44,517,486,22</bounds>
+        <bounds>44,517,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme3_tag2_checked" source="themes.theme3.tags.tag2.checked">
+      <button_checkbox name="theme3_tag2_checked" source="themes.theme3.tags.tag2.checked">
         <bounds>20,518,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme3_tag2_name" source="themes.theme3.tags.tag2.name">
-        <bounds>50,517,476,22</bounds>
+        <bounds>50,517,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme3_tag3_frame">
         <frame name="border" />
-        <bounds>44,541,486,22</bounds>
+        <bounds>44,541,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme3_tag3_checked" source="themes.theme3.tags.tag3.checked">
+      <button_checkbox name="theme3_tag3_checked" source="themes.theme3.tags.tag3.checked">
         <bounds>20,542,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme3_tag3_name" source="themes.theme3.tags.tag3.name">
-        <bounds>50,541,476,22</bounds>
+        <bounds>50,541,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme3_tag4_frame">
         <frame name="border" />
-        <bounds>44,565,486,22</bounds>
+        <bounds>44,565,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme3_tag4_checked" source="themes.theme3.tags.tag4.checked">
+      <button_checkbox name="theme3_tag4_checked" source="themes.theme3.tags.tag4.checked">
         <bounds>20,566,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme3_tag4_name" source="themes.theme3.tags.tag4.name">
-        <bounds>50,565,476,22</bounds>
+        <bounds>50,565,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme3_tag5_frame">
         <frame name="border" />
-        <bounds>44,589,486,22</bounds>
+        <bounds>44,589,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme3_tag5_checked" source="themes.theme3.tags.tag5.checked">
+      <button_checkbox name="theme3_tag5_checked" source="themes.theme3.tags.tag5.checked">
         <bounds>20,590,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme3_tag5_name" source="themes.theme3.tags.tag5.name">
-        <bounds>50,589,476,22</bounds>
+        <bounds>50,589,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme3_tag6_frame">
         <frame name="border" />
-        <bounds>44,613,486,22</bounds>
+        <bounds>44,613,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme3_tag6_checked" source="themes.theme3.tags.tag6.checked">
+      <button_checkbox name="theme3_tag6_checked" source="themes.theme3.tags.tag6.checked">
         <bounds>20,614,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme3_tag6_name" source="themes.theme3.tags.tag6.name">
-        <bounds>50,613,476,22</bounds>
+        <bounds>50,613,301,22</bounds>
       </stringfield>
       <stringcontrol name="theme3_weaknesstags_label">
         <bounds>20,643,110,20</bounds>
@@ -459,23 +506,23 @@
       </stringcontrol>
       <genericcontrol name="theme3_tag7_frame">
         <frame name="border" />
-        <bounds>44,663,486,22</bounds>
+        <bounds>44,663,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme3_tag7_checked" source="themes.theme3.tags.tag7.checked">
+      <button_checkbox name="theme3_tag7_checked" source="themes.theme3.tags.tag7.checked">
         <bounds>20,664,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme3_tag7_name" source="themes.theme3.tags.tag7.name">
-        <bounds>50,663,476,22</bounds>
+        <bounds>50,663,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme3_tag8_frame">
         <frame name="border" />
-        <bounds>44,687,486,22</bounds>
+        <bounds>44,687,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme3_tag8_checked" source="themes.theme3.tags.tag8.checked">
+      <button_checkbox name="theme3_tag8_checked" source="themes.theme3.tags.tag8.checked">
         <bounds>20,688,20,20</bounds>
-      </os_checkbox>
+      </button_checkbox>
       <stringfield name="theme3_tag8_name" source="themes.theme3.tags.tag8.name">
-        <bounds>50,687,476,22</bounds>
+        <bounds>50,687,301,22</bounds>
       </stringfield>
       <stringcontrol name="theme3_identity_label">
         <bounds>20,717,60,20</bounds>
@@ -484,10 +531,10 @@
       </stringcontrol>
       <genericcontrol name="theme3_identity_frame">
         <frame name="border" />
-        <bounds>85,715,445,22</bounds>
+        <bounds>85,715,341,22</bounds>
       </genericcontrol>
       <stringfield name="theme3_identity" source="themes.theme3.identity">
-        <bounds>85,715,445,22</bounds>
+        <bounds>85,715,341,22</bounds>
       </stringfield>
       <stringcontrol name="theme3_specialname_label">
         <bounds>20,743,90,20</bounds>
@@ -496,195 +543,203 @@
       </stringcontrol>
       <genericcontrol name="theme3_specialname_frame">
         <frame name="border" />
-        <bounds>115,741,170,22</bounds>
+        <bounds>115,741,311,22</bounds>
       </genericcontrol>
       <stringfield name="theme3_specialname" source="themes.theme3.specialname">
-        <bounds>115,741,170,22</bounds>
+        <bounds>115,741,311,22</bounds>
       </stringfield>
       <stringcontrol name="theme3_upgrades_label">
-        <bounds>310,743,60,20</bounds>
+        <bounds>20,765,60,20</bounds>
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
-      <os_checkbox name="theme3_upgrade1" source="themes.theme3.upgrade1">
-        <bounds>380,741,20,20</bounds>
-      </os_checkbox>
-      <os_checkbox name="theme3_upgrade2" source="themes.theme3.upgrade2">
-        <bounds>406,741,20,20</bounds>
-      </os_checkbox>
-      <os_checkbox name="theme3_upgrade3" source="themes.theme3.upgrade3">
-        <bounds>432,741,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme3_upgrade1" source="themes.theme3.upgrade1">
+        <bounds>85,763,20,20</bounds>
+      </button_checkbox>
+      <button_checkbox name="theme3_upgrade2" source="themes.theme3.upgrade2">
+        <bounds>111,763,20,20</bounds>
+      </button_checkbox>
+      <button_checkbox name="theme3_upgrade3" source="themes.theme3.upgrade3">
+        <bounds>137,763,20,20</bounds>
+      </button_checkbox>
       <formattedtext name="theme3_specialtext" source="themes.theme3.specialtext">
-        <bounds>20,769,510,34</bounds>
+        <bounds>20,787,406,16</bounds>
       </formattedtext>
       <genericcontrol name="theme4_frame">
         <frame name="groupbox" />
-        <bounds>565,415,540,392</bounds>
+        <bounds>470,415,432,392</bounds>
       </genericcontrol>
       <stringcontrol name="theme4_cardlabel">
-        <bounds>575,421,80,20</bounds>
+        <bounds>480,421,80,20</bounds>
         <static text="Theme 4" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <stringcontrol name="theme4_name_label">
-        <bounds>575,445,45,20</bounds>
+        <bounds>480,445,45,20</bounds>
         <static textres="otherscape_label_theme" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <genericcontrol name="theme4_name_frame">
         <frame name="border" />
-        <bounds>620,443,300,22</bounds>
+        <bounds>525,443,250,22</bounds>
       </genericcontrol>
       <stringfield name="theme4_name" source="themes.theme4.name">
-        <bounds>620,443,300,22</bounds>
+        <bounds>525,443,150,22</bounds>
       </stringfield>
       <stringcontrol name="theme4_family_label">
-        <bounds>930,445,45,20</bounds>
+        <bounds>835,445,45,20</bounds>
         <static textres="otherscape_label_family" />
         <readonly />
+        <invisible />
       </stringcontrol>
       <genericcontrol name="theme4_family_frame">
         <frame name="border" />
-        <bounds>980,443,105,22</bounds>
+        <bounds>781,443,105,22</bounds>
       </genericcontrol>
       <button_stringcycler name="theme4_family" source="themes.theme4.family">
-        <bounds>980,443,105,22</bounds>
+        <bounds>781,443,105,22</bounds>
         <parameters>
           <labelsres>otherscape_family_mythos|otherscape_family_self|otherscape_family_noise</labelsres>
           <values>Mythos|Self|Noise</values>
         </parameters>
+        <script>
+          function onValueChanged()
+            window.updateTheme4IdentityLabel();
+          end
+        </script>
       </button_stringcycler>
       <stringcontrol name="theme4_powertags_label">
-        <bounds>575,473,90,20</bounds>
+        <bounds>480,473,90,20</bounds>
         <static text="Power Tags" />
         <readonly />
       </stringcontrol>
       <genericcontrol name="theme4_tag1_frame">
         <frame name="border" />
-        <bounds>599,493,486,22</bounds>
+        <bounds>504,493,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme4_tag1_checked" source="themes.theme4.tags.tag1.checked">
-        <bounds>575,494,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme4_tag1_checked" source="themes.theme4.tags.tag1.checked">
+        <bounds>480,494,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme4_tag1_name" source="themes.theme4.tags.tag1.name">
-        <bounds>605,493,476,22</bounds>
+        <bounds>510,493,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme4_tag2_frame">
         <frame name="border" />
-        <bounds>599,517,486,22</bounds>
+        <bounds>504,517,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme4_tag2_checked" source="themes.theme4.tags.tag2.checked">
-        <bounds>575,518,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme4_tag2_checked" source="themes.theme4.tags.tag2.checked">
+        <bounds>480,518,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme4_tag2_name" source="themes.theme4.tags.tag2.name">
-        <bounds>605,517,476,22</bounds>
+        <bounds>510,517,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme4_tag3_frame">
         <frame name="border" />
-        <bounds>599,541,486,22</bounds>
+        <bounds>504,541,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme4_tag3_checked" source="themes.theme4.tags.tag3.checked">
-        <bounds>575,542,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme4_tag3_checked" source="themes.theme4.tags.tag3.checked">
+        <bounds>480,542,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme4_tag3_name" source="themes.theme4.tags.tag3.name">
-        <bounds>605,541,476,22</bounds>
+        <bounds>510,541,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme4_tag4_frame">
         <frame name="border" />
-        <bounds>599,565,486,22</bounds>
+        <bounds>504,565,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme4_tag4_checked" source="themes.theme4.tags.tag4.checked">
-        <bounds>575,566,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme4_tag4_checked" source="themes.theme4.tags.tag4.checked">
+        <bounds>480,566,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme4_tag4_name" source="themes.theme4.tags.tag4.name">
-        <bounds>605,565,476,22</bounds>
+        <bounds>510,565,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme4_tag5_frame">
         <frame name="border" />
-        <bounds>599,589,486,22</bounds>
+        <bounds>504,589,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme4_tag5_checked" source="themes.theme4.tags.tag5.checked">
-        <bounds>575,590,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme4_tag5_checked" source="themes.theme4.tags.tag5.checked">
+        <bounds>480,590,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme4_tag5_name" source="themes.theme4.tags.tag5.name">
-        <bounds>605,589,476,22</bounds>
+        <bounds>510,589,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme4_tag6_frame">
         <frame name="border" />
-        <bounds>599,613,486,22</bounds>
+        <bounds>504,613,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme4_tag6_checked" source="themes.theme4.tags.tag6.checked">
-        <bounds>575,614,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme4_tag6_checked" source="themes.theme4.tags.tag6.checked">
+        <bounds>480,614,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme4_tag6_name" source="themes.theme4.tags.tag6.name">
-        <bounds>605,613,476,22</bounds>
+        <bounds>510,613,301,22</bounds>
       </stringfield>
       <stringcontrol name="theme4_weaknesstags_label">
-        <bounds>575,643,110,20</bounds>
+        <bounds>480,643,110,20</bounds>
         <static text="Weakness Tags" />
         <readonly />
       </stringcontrol>
       <genericcontrol name="theme4_tag7_frame">
         <frame name="border" />
-        <bounds>599,663,486,22</bounds>
+        <bounds>504,663,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme4_tag7_checked" source="themes.theme4.tags.tag7.checked">
-        <bounds>575,664,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme4_tag7_checked" source="themes.theme4.tags.tag7.checked">
+        <bounds>480,664,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme4_tag7_name" source="themes.theme4.tags.tag7.name">
-        <bounds>605,663,476,22</bounds>
+        <bounds>510,663,301,22</bounds>
       </stringfield>
       <genericcontrol name="theme4_tag8_frame">
         <frame name="border" />
-        <bounds>599,687,486,22</bounds>
+        <bounds>504,687,388,22</bounds>
       </genericcontrol>
-      <os_checkbox name="theme4_tag8_checked" source="themes.theme4.tags.tag8.checked">
-        <bounds>575,688,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme4_tag8_checked" source="themes.theme4.tags.tag8.checked">
+        <bounds>480,688,20,20</bounds>
+      </button_checkbox>
       <stringfield name="theme4_tag8_name" source="themes.theme4.tags.tag8.name">
-        <bounds>605,687,476,22</bounds>
+        <bounds>510,687,301,22</bounds>
       </stringfield>
       <stringcontrol name="theme4_identity_label">
-        <bounds>575,717,60,20</bounds>
+        <bounds>480,717,60,20</bounds>
         <static textres="otherscape_label_identity" />
         <readonly />
       </stringcontrol>
       <genericcontrol name="theme4_identity_frame">
         <frame name="border" />
-        <bounds>640,715,445,22</bounds>
+        <bounds>545,715,341,22</bounds>
       </genericcontrol>
       <stringfield name="theme4_identity" source="themes.theme4.identity">
-        <bounds>640,715,445,22</bounds>
+        <bounds>545,715,341,22</bounds>
       </stringfield>
       <stringcontrol name="theme4_specialname_label">
-        <bounds>575,743,90,20</bounds>
+        <bounds>480,743,90,20</bounds>
         <static textres="otherscape_label_special" />
         <readonly />
       </stringcontrol>
       <genericcontrol name="theme4_specialname_frame">
         <frame name="border" />
-        <bounds>670,741,170,22</bounds>
+        <bounds>575,741,311,22</bounds>
       </genericcontrol>
       <stringfield name="theme4_specialname" source="themes.theme4.specialname">
-        <bounds>670,741,170,22</bounds>
+        <bounds>575,741,311,22</bounds>
       </stringfield>
       <stringcontrol name="theme4_upgrades_label">
-        <bounds>865,743,60,20</bounds>
+        <bounds>480,765,60,20</bounds>
         <static textres="otherscape_label_upgrades" />
         <readonly />
       </stringcontrol>
-      <os_checkbox name="theme4_upgrade1" source="themes.theme4.upgrade1">
-        <bounds>935,741,20,20</bounds>
-      </os_checkbox>
-      <os_checkbox name="theme4_upgrade2" source="themes.theme4.upgrade2">
-        <bounds>961,741,20,20</bounds>
-      </os_checkbox>
-      <os_checkbox name="theme4_upgrade3" source="themes.theme4.upgrade3">
-        <bounds>987,741,20,20</bounds>
-      </os_checkbox>
+      <button_checkbox name="theme4_upgrade1" source="themes.theme4.upgrade1">
+        <bounds>545,763,20,20</bounds>
+      </button_checkbox>
+      <button_checkbox name="theme4_upgrade2" source="themes.theme4.upgrade2">
+        <bounds>571,763,20,20</bounds>
+      </button_checkbox>
+      <button_checkbox name="theme4_upgrade3" source="themes.theme4.upgrade3">
+        <bounds>597,763,20,20</bounds>
+      </button_checkbox>
       <formattedtext name="theme4_specialtext" source="themes.theme4.specialtext">
-        <bounds>575,769,510,34</bounds>
+        <bounds>480,787,406,16</bounds>
       </formattedtext>
     </sheetdata>
   </windowclass>
