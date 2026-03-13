@@ -86,7 +86,7 @@
           local cFrame = self[string.format("theme%d_frame", i)];
           if cFrame then
             if i == nTheme then
-              cFrame.setFrame("metalplate");
+              cFrame.setFrame("diebox");
             else
               cFrame.setFrame("groupbox");
             end
