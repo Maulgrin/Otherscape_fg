@@ -3,6 +3,7 @@
   <windowclass name="charsheet_themes">
     <script>
       local _nSelectedTheme = nil;
+      local _aTagCheckedHandlerPaths = {};
       local _aThemeControlSuffixes = {
         "frame",
         "name_frame",
@@ -180,6 +181,150 @@
         return "MISS";
       end
 
+      local function tryAddDesktopModifier(nDelta)
+        if not nDelta or nDelta == 0 then
+          return false;
+        end
+
+        if ModifierStack then
+          if type(ModifierStack.addSlot) == "function" then
+            local bOk = pcall(ModifierStack.addSlot, "", nDelta);
+            if bOk then
+              return true;
+            end
+            bOk = pcall(ModifierStack.addSlot, nDelta);
+            if bOk then
+              return true;
+            end
+            bOk = pcall(ModifierStack.addSlot, nil, nDelta);
+            if bOk then
+              return true;
+            end
+          end
+
+          if type(ModifierStack.addModifier) == "function" then
+            local bOk = pcall(ModifierStack.addModifier, nDelta);
+            if bOk then
+              return true;
+            end
+            bOk = pcall(ModifierStack.addModifier, "", nDelta);
+            if bOk then
+              return true;
+            end
+          end
+        end
+
+        if ActionsManager then
+          if type(ActionsManager.addMod) == "function" then
+            local bOk = pcall(ActionsManager.addMod, nDelta);
+            if bOk then
+              return true;
+            end
+          end
+
+          if type(ActionsManager.addModifier) == "function" then
+            local bOk = pcall(ActionsManager.addModifier, nDelta);
+            if bOk then
+              return true;
+            end
+          end
+        end
+
+        return false;
+      end
+
+      local function addDesktopModifier(nDelta)
+        if not tryAddDesktopModifier(nDelta) then
+          if ChatManager and ChatManager.SystemMessage then
+            ChatManager.SystemMessage(string.format("Unable to add %d to desktop modifier.", nDelta));
+          end
+        end
+      end
+
+      function addPlusOneDesktopModifier()
+        addDesktopModifier(1);
+      end
+
+      function addMinusOneDesktopModifier()
+        addDesktopModifier(-1);
+      end
+
+      local function updateThemeRollTagNumber()
+        local nTag = 0;
+
+        for nTheme = 1, 4 do
+          for nTagIndex = 1, 6 do
+            local cTag = self[string.format("theme%d_tag%d_checked", nTheme, nTagIndex)];
+            local nValue = 0;
+            if cTag and cTag.getValue then
+              nValue = tonumber(cTag.getValue()) or 0;
+            end
+            if nValue ~= 0 then
+              nTag = nTag + 1;
+            end
+          end
+
+          for nTagIndex = 7, 8 do
+            local cTag = self[string.format("theme%d_tag%d_checked", nTheme, nTagIndex)];
+            local nValue = 0;
+            if cTag and cTag.getValue then
+              nValue = tonumber(cTag.getValue()) or 0;
+            end
+            if nValue ~= 0 then
+              nTag = nTag - 1;
+            end
+          end
+        end
+
+        if theme_roll_tagnumber then
+          theme_roll_tagnumber.setValue(nTag);
+        end
+      end
+
+      function clearSelectedThemeTags()
+        for nTheme = 1, 4 do
+          for nTagIndex = 1, 8 do
+            local cTag = self[string.format("theme%d_tag%d_checked", nTheme, nTagIndex)];
+            if cTag and cTag.setValue then
+              cTag.setValue(0);
+            end
+          end
+        end
+
+        updateThemeRollTagNumber();
+      end
+
+      local function onTagCheckedChanged()
+        updateThemeRollTagNumber();
+      end
+
+      local function registerTagCheckedHandlers()
+        local nodeChar = getDatabaseNode();
+        if not nodeChar then
+          return;
+        end
+
+        local sNodePath = nodeChar.getPath();
+        if not sNodePath or sNodePath == "" then
+          return;
+        end
+
+        for nTheme = 1, 4 do
+          for nTagIndex = 1, 8 do
+            local sPath = string.format("%s.themes.theme%d.tags.tag%d.checked", sNodePath, nTheme, nTagIndex);
+            DB.addHandler(sPath, "onUpdate", onTagCheckedChanged);
+            table.insert(_aTagCheckedHandlerPaths, sPath);
+          end
+        end
+      end
+
+      local function unregisterTagCheckedHandlers()
+        for _, sPath in ipairs(_aTagCheckedHandlerPaths) do
+          DB.removeHandler(sPath, "onUpdate", onTagCheckedChanged);
+        end
+        _aTagCheckedHandlerPaths = {};
+      end
+
       local function onTagRollResult(rSource, _, rRoll)
         local nTotal = ActionsManager.total(rRoll);
         local sOutcome = getTagRollOutcome(nTotal);
@@ -189,9 +334,7 @@
         rMessage.text = string.format("%s [%s]", sBaseText, sOutcome);
         Comm.deliverChatMessage(rMessage);
 
-        if theme_roll_tagnumber then
-          theme_roll_tagnumber.setValue(0);
-        end
+        updateThemeRollTagNumber();
       end
 
       function selectThemeTab(nTheme)
@@ -211,6 +354,8 @@
       end
 
       function performTagRoll(draginfo)
+        updateThemeRollTagNumber();
+
         local nTag = 0;
         if theme_roll_tagnumber then
           nTag = tonumber(theme_roll_tagnumber.getValue()) or 0;
@@ -261,17 +406,23 @@
 
         ActionsManager.initAction("tagroll");
         if GameSystem and GameSystem.actions and GameSystem.actions.tagroll then
-          GameSystem.actions.tagroll.bUseModStack = "false";
+          GameSystem.actions.tagroll.bUseModStack = "true";
         end
         if not ActionsManager.getResultHandler("tagroll") then
           ActionsManager.registerResultHandler("tagroll", onTagRollResult);
         end
 
+        registerTagCheckedHandlers();
         updateTheme1IdentityLabel();
         updateTheme2IdentityLabel();
         updateTheme3IdentityLabel();
         updateTheme4IdentityLabel();
+        updateThemeRollTagNumber();
         selectThemeTab(1);
+      end
+
+      function onClose()
+        unregisterTagCheckedHandlers();
       end
     </script>
     <sheetdata>
@@ -329,6 +480,42 @@
         <bounds>435,14,56,25</bounds>
         <frame name="fieldlight" />
       </numberfield>
+      <button_text_toggle_sm name="theme_roll_mod_plus1">
+        <bounds>494,14,25,25</bounds>
+        <state text="+1" />
+        <state text="+1" />
+        <tooltip text="Add +1 to desktop modifier" />
+        <script>
+          function onButtonPress()
+            setValue(0);
+            window.addPlusOneDesktopModifier();
+          end
+        </script>
+      </button_text_toggle_sm>
+      <button_text_toggle_sm name="theme_roll_mod_minus1">
+        <bounds>521,14,25,25</bounds>
+        <state text="-1" />
+        <state text="-1" />
+        <tooltip text="Add -1 to desktop modifier" />
+        <script>
+          function onButtonPress()
+            setValue(0);
+            window.addMinusOneDesktopModifier();
+          end
+        </script>
+      </button_text_toggle_sm>
+      <button_text_toggle_sm name="theme_roll_clear_tags">
+        <bounds>548,14,42,25</bounds>
+        <state text="CLR" />
+        <state text="CLR" />
+        <tooltip text="Clear all selected power and weakness tags" />
+        <script>
+          function onButtonPress()
+            setValue(0);
+            window.clearSelectedThemeTags();
+          end
+        </script>
+      </button_text_toggle_sm>
       <genericcontrol name="theme1_frame">
         <frame name="border" />
         <bounds>10,38,389,392</bounds>
