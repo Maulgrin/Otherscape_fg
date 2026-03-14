@@ -375,7 +375,7 @@
         </script>
       </button_stringcycler>
       <stringcontrol name="theme1_powertags_label">
-        <bounds>20,96,90,20</bounds>
+        <bounds>30,96,90,20</bounds>
         <static text="Power Tags" />
         <readonly />
       </stringcontrol>
@@ -458,7 +458,7 @@
         <bounds>295,237,20,20</bounds>
       </button_checkbox>
       <stringcontrol name="theme1_weaknesstags_label">
-        <bounds>20,266,110,20</bounds>
+        <bounds>30,266,110,20</bounds>
         <static text="Weakness Tags" />
         <readonly />
       </stringcontrol>
@@ -572,7 +572,7 @@
         </script>
       </button_stringcycler>
       <stringcontrol name="theme2_powertags_label">
-        <bounds>95,96,90,20</bounds>
+        <bounds>105,96,90,20</bounds>
         <static text="Power Tags" />
         <readonly />
       </stringcontrol>
@@ -655,7 +655,7 @@
         <bounds>370,237,20,20</bounds>
       </button_checkbox>
       <stringcontrol name="theme2_weaknesstags_label">
-        <bounds>95,266,110,20</bounds>
+        <bounds>105,266,110,20</bounds>
         <static text="Weakness Tags" />
         <readonly />
       </stringcontrol>
@@ -769,7 +769,7 @@
         </script>
       </button_stringcycler>
       <stringcontrol name="theme3_powertags_label">
-        <bounds>170,96,90,20</bounds>
+        <bounds>180,96,90,20</bounds>
         <static text="Power Tags" />
         <readonly />
       </stringcontrol>
@@ -852,7 +852,7 @@
         <bounds>445,237,20,20</bounds>
       </button_checkbox>
       <stringcontrol name="theme3_weaknesstags_label">
-        <bounds>170,266,110,20</bounds>
+        <bounds>180,266,110,20</bounds>
         <static text="Weakness Tags" />
         <readonly />
       </stringcontrol>
@@ -966,7 +966,7 @@
         </script>
       </button_stringcycler>
       <stringcontrol name="theme4_powertags_label">
-        <bounds>245,96,90,20</bounds>
+        <bounds>255,96,90,20</bounds>
         <static text="Power Tags" />
         <readonly />
       </stringcontrol>
@@ -1049,7 +1049,7 @@
         <bounds>520,237,20,20</bounds>
       </button_checkbox>
       <stringcontrol name="theme4_weaknesstags_label">
-        <bounds>245,266,110,20</bounds>
+        <bounds>255,266,110,20</bounds>
         <static text="Weakness Tags" />
         <readonly />
       </stringcontrol>
