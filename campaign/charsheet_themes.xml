@@ -89,14 +89,16 @@
         end
       end
 
-      local function shiftThemeControlsX(nTheme, nDelta)
+      local function shiftThemeControls(nTheme, nDeltaX, nDeltaY)
+        nDeltaX = nDeltaX or 0;
+        nDeltaY = nDeltaY or 0;
         local sPrefix = string.format("theme%d_", nTheme);
         for _, sSuffix in ipairs(_aThemeControlSuffixes) do
           local c = self[sPrefix .. sSuffix];
           if c and c.getStaticBounds and c.setStaticBounds then
             local x, y, w, h = c.getStaticBounds();
             if x and y and w and h then
-              c.setStaticBounds(x + nDelta, y, w, h);
+              c.setStaticBounds(x + nDeltaX, y + nDeltaY, w, h);
             end
           end
         end
@@ -250,11 +252,12 @@
       end
 
       function onInit()
-        local nCascadeExtra = 50;
-        shiftThemeControlsX(2, nCascadeExtra);
-        shiftThemeControlsX(3, nCascadeExtra * 2);
-        shiftThemeControlsX(4, nCascadeExtra * 3);
-        shiftLoadoutControlsX(nCascadeExtra * 3);
+        -- Arrange theme cards in a 2x2 box:
+        -- 1 (top-left), 2 (bottom-left), 3 (top-right), 4 (bottom-right)
+        shiftThemeControls(2, -75, 392);
+        shiftThemeControls(3, 247, 0);
+        shiftThemeControls(4, 172, 392);
+        shiftLoadoutControlsX(169);
 
         ActionsManager.initAction("tagroll");
         if GameSystem and GameSystem.actions and GameSystem.actions.tagroll then

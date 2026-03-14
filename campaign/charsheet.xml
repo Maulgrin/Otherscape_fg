@@ -24,6 +24,7 @@
       </picture_charsheet>
 
       <genericcontrol name="overviewframe">
+        <frame name="fielddark" offset="5,0,0,0" />
         <anchored>
           <left anchor="right" parent="portrait" offset="8" />
           <right offset="-212" />
@@ -35,7 +36,7 @@
       </genericcontrol>
 
       <stringfield name="name">
-        <frame name="fielddark" offset="5,0,0,0" />
+        <!-- <frame name="fielddark" offset="5,0,0,0" /> -->
         <anchored>
           <left anchor="left" parent="overviewframe" offset="31" />
           <right offset="-251" />
